@@ -1,0 +1,4 @@
+scoreboard players set MazeGeneratorTimerEnabled condition 0
+execute if score DebugReport condition matches 1 run tellraw @a[tag=debugger] {"rawtext":[{"text":"§l§7调试 >> §r§f执行了一次§edontforget/gameplay/maze_generator/timer_report§f，结果如下："}]}
+execute if score DebugReport condition matches 1 run tellraw @a[tag=debugger] {"rawtext":[{"text":"§aMazeGeneratorRuntime: "},{"score":{"name":"MazeGeneratorRuntime","objective":"timer"}},{"text":"\nMazeGeneratorLastRuntime: "},{"score":{"name":"MazeGeneratorLastRuntime","objective":"timer"}}]}
+scoreboard players operation MazeGeneratorLastRuntime timer = MazeGeneratorRuntime timer

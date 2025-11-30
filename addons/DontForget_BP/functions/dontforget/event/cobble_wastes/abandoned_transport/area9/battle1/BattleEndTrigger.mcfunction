@@ -1,0 +1,2 @@
+execute if score EV_CW_ABTP_Area9_Battle1_WaveCountdown timer matches -1 if score EV_CW_ABTP_Area9_Battle1_PlayerAmount counter matches 0 run function dontforget/event/cobble_wastes/abandoned_transport/area9/battle1/BattleEnd
+execute if score EV_CW_ABTP_Area9_Battle1_WaveCountdown timer matches -1 if score EV_CW_ABTP_Area9_Battle1_PlayerAmount counter matches 1.. if score EV_CW_ABTP_Area9_Battle1_CurrentWave counter > EV_CW_ABTP_Area9_Battle1_Wave counter run function dontforget/event/cobble_wastes/abandoned_transport/area9/battle1/BattleEndWin

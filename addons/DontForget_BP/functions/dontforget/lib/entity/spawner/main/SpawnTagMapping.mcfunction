@@ -1,0 +1,19 @@
+execute if entity @s[name=spawner.zombie1] run tag @s add spawner.zombie1
+execute if entity @s[name=spawner.zombie2] run tag @s add spawner.zombie2
+execute if entity @s[name=spawner.zombie3] run tag @s add spawner.zombie3
+execute if entity @s[name=spawner.zombie4] run tag @s add spawner.zombie4
+execute if entity @s[name=spawner.zombie5] run tag @s add spawner.zombie5
+execute if entity @s[name=spawner.zombie6] run tag @s add spawner.zombie6
+execute if entity @s[name=spawner.skeleton1] run tag @s add spawner.skeleton1
+execute if entity @s[name=spawner.skeleton2] run tag @s add spawner.skeleton2
+execute if entity @s[name=spawner.skeleton3] run tag @s add spawner.skeleton3
+
+execute if entity @s[tag=spawner.zombie1] run function dontforget/lib/entity/enemy/effect/spawn/init/Zombie1
+execute if entity @s[tag=spawner.zombie2] run function dontforget/lib/entity/enemy/effect/spawn/init/Zombie2
+execute if entity @s[tag=spawner.zombie3] run function dontforget/lib/entity/enemy/effect/spawn/init/Zombie3
+execute if entity @s[tag=spawner.zombie4] run function dontforget/lib/entity/enemy/effect/spawn/init/Zombie4
+execute if entity @s[tag=spawner.zombie5] run function dontforget/lib/entity/enemy/effect/spawn/init/Zombie5
+execute if entity @s[tag=spawner.zombie6] run function dontforget/lib/entity/enemy/effect/spawn/init/Zombie6
+execute if entity @s[tag=spawner.skeleton1] run function dontforget/lib/entity/enemy/effect/spawn/init/Skeleton1
+execute if entity @s[tag=spawner.skeleton2] run function dontforget/lib/entity/enemy/effect/spawn/init/Skeleton2
+execute if entity @s[tag=spawner.skeleton3] run function dontforget/lib/entity/enemy/effect/spawn/init/Skeleton3

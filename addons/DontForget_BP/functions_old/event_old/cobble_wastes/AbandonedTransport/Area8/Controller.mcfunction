@@ -1,0 +1,2 @@
+execute if score EVENT_CW_AbandonedTransport_Area8_Trigger1 step matches 0 run function dontforget/event/cobble_wastes/AbandonedTransport/Area8/Trigger1
+execute if score EVENT_CW_AbandonedTransport_Area8_Trigger2 step matches 0 run function dontforget/event/cobble_wastes/AbandonedTransport/Area8/Trigger2

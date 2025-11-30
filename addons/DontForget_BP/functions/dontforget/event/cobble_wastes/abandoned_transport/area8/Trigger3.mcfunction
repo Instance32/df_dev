@@ -1,0 +1,2 @@
+execute unless block 133 66 -24 suspicious_gravel run function dontforget/event/cobble_wastes/abandoned_transport/area8/TriggerEvent3
+execute unless block 133 66 -22 suspicious_gravel run function dontforget/event/cobble_wastes/abandoned_transport/area8/TriggerEvent3

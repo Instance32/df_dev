@@ -1,0 +1,1 @@
+execute if score EVENT_CW_CobbleWastes step matches 0 run function dontforget/event/cobble_wastes/Main/Init

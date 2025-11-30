@@ -1,0 +1,2 @@
+execute if entity @p[tag=game_player,x=87,y=45,z=-18,dx=4,dy=2,dz=4] run function dontforget/event/cobble_wastes/beginning/area3/battle1/BattleBegin
+execute if entity @p[tag=game_player,x=89,y=45,z=-18,dx=4,dy=2,dz=8] run function dontforget/event/cobble_wastes/beginning/area3/battle1/BattleBegin

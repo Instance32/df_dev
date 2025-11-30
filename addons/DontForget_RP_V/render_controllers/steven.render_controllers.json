@@ -1,0 +1,74 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.steven_base": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.base"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.skins[query.skin_id]"
+      ]
+    },
+    "controller.render.steven_masked": {
+      "arrays": {
+        "textures": {
+          "Array.biomes": [
+            "Texture.coat"
+          ],
+          "Array.professions": [
+            "Texture.unskilled",
+            "Texture.armorer"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.masked"
+        }
+      ],
+      "textures": [
+        "Array.professions[variable.profession_index]",
+        "Array.biomes[query.mark_variant]"
+      ]
+    },
+    "controller.render.steven_level": {
+      "arrays": {
+        "textures": {
+          "Array.levels": [
+            "Texture.level_stone",
+            "Texture.level_iron",
+            "Texture.level_gold",
+            "Texture.level_emerald",
+            "Texture.level_diamond"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        {
+          "*": "!query.is_baby && variable.profession_index != 0 && variable.profession_index != 14"
+        }
+      ],
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.levels[variable.level_index]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+execute if score EVENT_CW_CommonPlace_Area5_Trigger1 step matches 0 run function dontforget/event/cobble_wastes/CommonPlace/Area5/Trigger1
+execute if score EVENT_CW_CommonPlace_Area5_Trigger2 step matches 0 run function dontforget/event/cobble_wastes/CommonPlace/Area5/Trigger2
+execute if score EVENT_CW_CommonPlace_Area5_Repeat1 step matches 0 if score TICK timer matches 20 run function dontforget/event/cobble_wastes/CommonPlace/Area5/Repeat1
+execute if score EVENT_CW_CommonPlace_Area5_Repeat2 step matches 0 if score TICK timer matches 20 run function dontforget/event/cobble_wastes/CommonPlace/Area5/Repeat2

@@ -1,0 +1,2 @@
+execute if score EV_CW_BGN_Area2_Trigger2 step matches 0 unless block 60 47 -10 suspicious_gravel run function dontforget/event/cobble_wastes/beginning/area2/TriggerEvent2
+execute if score EV_CW_BGN_Area2_Trigger2 step matches 0 unless block 60 47 -8 suspicious_gravel run function dontforget/event/cobble_wastes/beginning/area2/TriggerEvent2

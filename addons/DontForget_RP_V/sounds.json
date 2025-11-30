@@ -1,0 +1,91 @@
+{
+    "entity_sounds" : {
+        "defaults" : {
+          "events" : {
+             "ambient" : "",
+             "ambient.in.raid" : "",
+             "ambient.in.water" : "",
+             "celebrate" : "",
+             "death" : "",
+             "death.in.water" : "",
+             "drink" : {
+                "pitch" : [ 0.90, 1.10 ],
+                "sound" : "random.drink",
+                "volume" : 0.350
+             },
+             "drink.honey" : {
+                "pitch" : [ 0.90, 1.0 ],
+                "sound" : "random.drink_honey",
+                "volume" : 0.50
+             },
+             "eat" : {
+                "pitch" : [ 0.80, 1.20 ],
+                "sound" : "random.eat",
+                "volume" : [ 0.50, 1.10 ]
+             },
+             "fall.big" : {
+                "pitch" : 1.0,
+                "sound" : "damage.fallbig",
+                "volume" : 0.750
+             },
+             "fall.small" : {
+                "pitch" : 1.0,
+                "sound" : "damage.fallsmall",
+                "volume" : 0.750
+             },
+             "fizz" : {
+                "pitch" : [ 1.20, 2.0 ],
+                "sound" : "random.fizz",
+                "volume" : 0.70
+             },
+             "flop" : "",
+             "hurt" : "game.player.hurt",
+             "hurt.in.water" : "",
+             "splash" : {
+                "pitch" : [ 0.60, 1.40 ],
+                "sound" : "random.splash"
+             },
+             "swim" : {
+                "pitch" : [ 0.60, 1.40 ],
+                "sound" : "random.swim"
+             }
+          },
+          "pitch" : [ 0.80, 1.20 ],
+          "volume" : 1.0
+        },
+        "entities" : {
+            "dontforget:saving_orb" : {
+                "events" : {
+                    "ambient" : "beacon.ambient",
+                    "death" : "beacon.deactivate",
+                    "hurt" : "random.glass"
+                },
+            "pitch" : [ 0.80, 1.20 ],
+            "volume" : 1.0
+            },
+            "dontforget:steven" : {
+                "events" : {
+                    "ambient" : "mob.villager.idle",
+                    "death" : "mob.villager.death",
+                    "death.to.zombie" : "mob.villager.death",
+                    "haggle" : "mob.villager.haggle",
+                    "haggle.no" : "mob.villager.no",
+                    "haggle.yes" : "mob.villager.yes",
+                    "hurt" : "mob.villager.hit"
+                },
+            "pitch" : [ 0.80, 1.20 ],
+            "volume" : 1.0
+            },
+            "dontforget:vex_guide" : {
+                "events" : {
+                    "ambient" : "mob.vex.ambient",
+                    "charge" : "mob.vex.charge",
+                    "death" : "mob.vex.death",
+                    "hurt" : "mob.vex.hurt"
+                },
+                "pitch" : [ 0.80, 1.20 ],
+                "volume" : 1.0
+            }
+        }
+    }
+}

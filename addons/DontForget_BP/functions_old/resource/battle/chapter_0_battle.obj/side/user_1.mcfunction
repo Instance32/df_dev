@@ -1,0 +1,6 @@
+execute if score c0_side_battle op_timer matches 0 if score c0_side_battle t.c0_side matches 1 run scoreboard players set value c.enemy_amount -1
+execute if score c0_side_battle op_timer matches 0 if score c0_side_battle t.c0_side matches 1 run function resource/battle/chapter_0_battle.obj/side/wave/Wave1
+execute if score c0_side_battle op_timer matches 0 if score c0_side_battle t.c0_side matches 5..9 run function resource/battle/chapter_0_battle.obj/side/GetAliveEnemy
+execute if score c0_side_battle op_timer matches 0 if score c0_side_battle t.c0_side matches 10 run scoreboard players set c0_side_battle t.c0_side 5
+execute if score c0_side_battle op_timer matches 0 if score c0_side_battle t.c0_side matches 5..9 if score enemy_amount c.c0_side matches 0 run scoreboard players set c0_side_battle f.battle 2
+execute if score c0_side_battle op_timer matches 0 if score c0_side_battle t.c0_side matches 5..9 if score enemy_amount c.c0_side matches 0 run scoreboard players set c0_side_battle t.c0_side 0

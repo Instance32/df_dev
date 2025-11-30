@@ -1,0 +1,1 @@
+execute if entity @p[tag=game_player,x=119,y=48,z=-21,dx=2,dy=0.1,dz=2] run function dontforget/event/cobble_wastes/abandoned_transport/area8/TriggerEvent1

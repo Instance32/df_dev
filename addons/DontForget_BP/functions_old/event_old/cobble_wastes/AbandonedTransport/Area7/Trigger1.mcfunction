@@ -1,0 +1,2 @@
+execute if score EVENT_CW_AbandonedTransport_Area7_Trigger1 step matches 0 unless block 60 47 -10 suspicious_gravel run function dontforget/event/cobble_wastes/AbandonedTransport/Area7/TriggerEvent1
+execute if score EVENT_CW_AbandonedTransport_Area7_Trigger1 step matches 0 unless block 60 47 -8 suspicious_gravel run function dontforget/event/cobble_wastes/AbandonedTransport/Area7/TriggerEvent1

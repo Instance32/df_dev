@@ -1,0 +1,149 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+	    "controller.animation.steven.baby" : {
+			"initial_state" : "baby",
+			"states" : {
+				"baby" : {
+					"animations" : [
+						{
+							"baby_transform" : "query.is_baby"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.steven.general" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [
+						"general",
+						{
+							"look_at_target" : "!query.is_sleeping"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.steven.move" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [
+						{
+							"move" : "query.modified_move_speed"
+						}
+					],
+					"transitions" : [
+						{
+							"lie" : "query.is_sleeping"
+						}
+					]
+				},
+				"lie" : {
+					"animations" : [ "lie" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_sleeping"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.steven.raise_arms" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"raising" : "variable.raise_arms > 0.0"
+						}
+					]
+				},
+				"raising" : {
+					"animations" : [ "raise_arms" ],
+					"transitions" : [
+						{
+							"default" : "variable.raise_arms == 0.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.steven.sit": {
+		    "initial_state": "standing",
+			"states": {
+				"standing": {
+				    "animations": ["standing"],
+				    "transitions": [
+						{"sit_down": "q.property('dontforget:steven_general_state')=='seated'"}
+					],
+					"blend_via_shortest_path": true
+				},
+				"sit_down": {
+					"animations": ["sit_down"],
+					"transitions": [
+						{"seated": "q.any_animation_finished"},
+						{"stand_up": "q.property('dontforget:steven_general_state')=='standing'"}
+					],
+					"blend_via_shortest_path": true
+				},
+				"seated": {
+					"animations": ["seated"],
+					"transitions": [
+						{"stand_up": "q.property('dontforget:steven_general_state')=='standing'"}
+					],
+					"blend_via_shortest_path": true
+				},
+				"stand_up": {
+					"animations": ["stand_up"],
+					"transitions": [
+						{"standing": "q.any_animation_finished"},
+						{"sit_down": "q.property('dontforget:steven_general_state')=='seated'"}
+					],
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.steven.arms": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+				    "animations": ["idle_arms"],
+					"transitions": [
+						{"shrink": "q.property('dontforget:steven_arm_state')=='arched'"}
+					],
+					"blend_via_shortest_path": true
+				},
+				"shrink": {
+					"animations": ["shrink_arms"],
+					"transitions": [
+						{"arched": "q.any_animation_finished"},
+						{"expand": "q.property('dontforget:steven_arm_state')=='idle'"}
+					],
+					"blend_via_shortest_path": true
+				},
+				"arched": {
+					"animations": ["arched_arms"],
+					"transitions": [
+						{"expand": "q.property('dontforget:steven_arm_state')=='idle'"}
+					],
+					"blend_via_shortest_path": true
+				},
+				"expand": {
+					"animations": ["expand_arms"],
+					"transitions": [
+						{"idle": "q.any_animation_finished"},
+						{"shrink": "q.property('dontforget:steven_arm_state')=='arched'"}
+					],
+					"blend_via_shortest_path": true
+				},
+				"raise": {
+					"animations": ["raise_arms"],
+					"blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

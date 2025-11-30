@@ -1,0 +1,1 @@
+event entity @s dontforget:as_enemy_adult

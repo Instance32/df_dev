@@ -1,0 +1,15 @@
+function dontforget/event/anywhere/start_room/Control_SetPlayerSpawn
+
+inputpermission set @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] camera enabled
+inputpermission set @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] movement enabled
+camera @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] clear
+
+execute as @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] run function dontforget/asset/entity/player/Spawn_CustomFilter
+
+#summon iron_golem Protecter 16399 85 16431
+
+scoreboard players set EV_AW_STARTROOM_PTLAnim flag 1
+scoreboard players set EV_AW_STARTROOM flag 2
+
+#DEBUG OUTPUT
+tellraw @a[tag=debugger] {"rawtext":[{"translate":"text.dialog.debug.prefix"},{"translate":"text.dialog.debug.run_function"},{"text":"dontforget/event/anywhere/start_room/portal_Anim_Active2"}]}

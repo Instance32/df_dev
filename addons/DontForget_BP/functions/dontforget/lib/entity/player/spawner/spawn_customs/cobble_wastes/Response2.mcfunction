@@ -1,0 +1,1 @@
+execute in overworld run tp @s 77 43 -7 facing 78 43 -7

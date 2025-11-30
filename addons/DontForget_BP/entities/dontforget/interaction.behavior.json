@@ -1,0 +1,502 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "dontforget:interaction",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "properties": {
+                "dontforget:interaction_type": {
+                    "type": "enum",
+                    "values": [ "default", "destroy", "block_placer", "collision_seat", "dialog_choice" ],
+                    "client_sync": false,
+                    "default": "default"
+                },
+                "dontforget:block_placer_type": {
+                    "type": "enum",
+                    "values": [ "undefined", "what" ],
+                    "client_sync": false,
+                    "default": "undefined"
+                }
+            }    
+        },
+        "component_groups": {
+            "dontforget:default": {
+                "minecraft:collision_box": {
+                    "width": 0.00,
+                    "height": 0.00
+                }
+            },
+            "dontforget:destroy": {
+                "minecraft:despawn": {
+                }
+            },
+            "dontforget:collision_seat": {
+                "minecraft:rideable": {
+                    "family_types": ["dontforget:collision"],
+                    "pull_in_entities": true,
+                    "seat_count": 1,
+                    "seats":[]
+                }
+            },
+            "dontforget:dialog_choice": {
+                "minecraft:collision_box": {
+                    "width": 1.15,
+                    "height": 1.15
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        },
+                                        {
+                                            "test": "has_tag",
+                                            "subject": "other",
+                                            "value": "is_making_dialog_choices"
+                                        }
+                                    ]
+                                },
+                                "event": 
+                                    "dontforget:dialog_choice_response.default"
+                            },
+                            "interact_text": "action.interaction.confirm"
+                        }
+                    ]
+                }
+            },
+            "dontforget:block_placer": {
+                "minecraft:collision_box": {
+                    "width": 0.95,
+                    "height": 0.95
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "event": 
+                                    "dontforget:block_placer_response"
+                            },
+                            "interact_text": "action.interaction.place"
+                        }
+                    ]
+                }
+            },
+            "dontforget:block_placer.air": {
+                "minecraft:collision_box": {
+                    "width": 1.15,
+                    "height": 1.15
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        }
+                                    ],
+                                    "any_of": [
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "minecraft:wooden_shovel"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "minecraft:stone_shovel"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "minecraft:iron_shovel"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "minecraft:golden_shovel"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "minecraft:diamond_shovel"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "minecraft:netherite_shovel"
+                                        }
+                                    ]
+                                },
+                                "event": 
+                                    "dontforget:block_placer_response.air"
+                            },
+                            "hurt_item": 1,
+                            "interact_text": "action.interaction.clean"
+                        }
+                    ]
+                }
+            },
+            "dontforget:block_placer.wooden_ladder_4x": {
+                "minecraft:collision_box": {
+                    "width": 0.95,
+                    "height": 3.95
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "dontforget:wooden_ladder_4x_item"
+                                        }
+                                    ]
+                                },
+                                "event": 
+                                    "dontforget:block_placer_response.wooden_ladder_4x"
+                            },
+                            "interact_text": "action.interaction.place",
+                            "use_item": true,
+                            "vibration": "entity_interact"
+                        }
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:nameable": {
+			    "allow_name_tag_renaming": false,
+			    "always_show": false
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+            "minecraft:type_family": {
+                "family": [ "interaction" ]
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            },
+            "minecraft:conditional_bandwidth_optimization": {
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/interaction/main/Init"
+                    ],
+                    "target": "self"
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "default"
+                } 
+            },
+            "dontforget:destroy": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/interaction/main/Destroy"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:destroy"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "destroy"
+                } 
+            },
+            "dontforget:dialog_choice.default": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/interaction/main/Init",
+                        "function dontforget/lib/entity/interaction/effect/dialog_choice/Init"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:dialog_choice"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "dialog_choice"
+                }          
+            },
+            "dontforget:dialog_choice_response.default": {
+                "sequence": [
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/interaction/effect/dialog_choice/Response"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/interaction/effect/dialog_choice/OtherResponse"
+                            ],
+                            "target": "other"
+                        }
+                    }
+                ],
+                "remove": {
+                    "component_groups": [
+                        "dontforget:dialog_choice"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "default"
+                }
+            },
+            "dontforget:block_placer.default": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/interaction/main/Init",
+                        "function dontforget/lib/entity/interaction/effect/block_placer/Init"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:block_placer"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "block_placer"
+                } 
+            },
+            "dontforget:block_placer_response.default": {
+                "sequence": [
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/interaction/effect/block_placer/Response"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/interaction/effect/block_placer/TargetResponse"
+                            ],
+                            "target": "other"
+                        }
+                    }
+                ],
+                "remove": {
+                    "component_groups": [
+                        "dontforget:block_placer"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "default"
+                } 
+            },
+            "dontforget:block_placer.air": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/interaction/main/Init",
+                        "function dontforget/lib/entity/interaction/effect/block_placer/Init",
+                        "function dontforget/lib/entity/interaction/effect/block_placer/air/Init"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:block_placer.air"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "block_placer"
+                } 
+            },
+            "dontforget:block_placer_response.air": {
+                "sequence": [
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/interaction/effect/block_placer/air/Response"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/interaction/effect/block_placer/air/OtherResponse"
+                            ],
+                            "target": "other"
+                        }
+                    }
+                ],
+                "remove": {
+                    "component_groups": [
+                        "dontforget:block_placer.air"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "default"
+                } 
+            },
+            "dontforget:block_placer.wooden_ladder_4x": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/interaction/main/Init",
+                        "function dontforget/lib/entity/interaction/effect/block_placer/Init",
+                        "function dontforget/lib/entity/interaction/effect/block_placer/wooden_ladder_4x/Init"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:block_placer.wooden_ladder_4x"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "block_placer"
+                } 
+            },
+            "dontforget:block_placer_response.wooden_ladder_4x": {
+                "sequence": [
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/interaction/effect/block_placer/wooden_ladder_4x/Response"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/interaction/effect/block_placer/wooden_ladder_4x/OtherResponse"
+                            ],
+                            "target": "other"
+                        }
+                    }
+                ],
+                "remove": {
+                    "component_groups": [
+                        "dontforget:block_placer.wooden_ladder_4x"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "default"
+                }   
+            },
+            "dontforget:collision_seat.default": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/interaction/main/Init",
+                        "function dontforget/lib/entity/interaction/effects/collision_seat/Init"
+                    ],
+                    "target": "self"
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:collision_seat"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:interaction_type": "collision_seat"
+                }          
+            }
+        }
+    } 
+}

@@ -1,0 +1,34 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.ladder_entity.states": {
+			"initial_state": "laying",
+			"states": {
+				"laying": {
+					"animations": ["laying"],
+					"transitions": [
+						{"stand_up": "q.variant == 2"}
+					]
+				},
+				"stand_up": {
+					"animations": ["stand_up"],
+					"transitions": [
+						{"standing": "q.any_animation_finished"}
+					]
+				},
+				"standing": {
+					"animations": ["standing"],
+					"transitions": [
+						{"lay_down": "q.variant == 0"}
+					]
+				},
+				"lay_down": {
+					"animations": ["lay_down"],
+					"transitions": [
+						{"laying": "q.any_animation_finished"}
+					]
+				}
+			}
+		}
+	}
+}

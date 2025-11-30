@@ -1,0 +1,1 @@
+execute if block 51 46 19 lever ["lever_direction"="south","open_bit"=true] if block 51 46 24 lever ["lever_direction"="north","open_bit"=true] run function dontforget/event/cobble_wastes/CommonPlace/Area2/TriggerEvent1

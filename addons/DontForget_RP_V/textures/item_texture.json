@@ -1,0 +1,30 @@
+{
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "entity_remover": {
+            "textures": "textures/dontforget/items/admin/entity_remover"
+        },
+        "wooden_ladder_4x_item": {
+			"textures": "textures/dontforget/items/wooden_ladder_4x_item"
+		},
+        "miner_helmet": {
+			"textures": "textures/dontforget/items/miner_helmet.png"
+		},
+		"miner_leader_helmet": {
+			"textures": "textures/dontforget/items/miner_leader_helmet.png"
+		},
+		"saving_crystal": {
+            "textures": "textures/dontforget/items/saving_crystal"
+        },
+        "saving_orb_spawn_egg": {
+            "textures": "textures/dontforget/items/spawn_eggs/saving_orb_spawn_egg"
+        },
+        "steven_spawn_egg": {
+            "textures": "textures/dontforget/items/spawn_eggs/steven_spawn_egg"
+        },
+        "vex_guide_spawn_egg": {
+			"textures": "textures/dontforget/items/spawn_eggs/vex_guide_spawn_egg"
+        }
+    }
+}

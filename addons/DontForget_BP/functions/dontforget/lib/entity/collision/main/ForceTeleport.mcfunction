@@ -1,0 +1,1 @@
+execute if entity @s[tag=!_can_move] run tp @s ~ ~ ~

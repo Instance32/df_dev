@@ -1,0 +1,4 @@
+scoreboard players set EV_AW_STARTROOM_PTLAnim timer 39
+
+#DEBUG OUTPUT
+tellraw @a[tag=debugger] {"rawtext":[{"translate":"text.dialog.debug.prefix"},{"translate":"text.dialog.debug.run_function"},{"text":"dontforget/event/anywhere/start_room/Portal_Anim_Skip"}]}

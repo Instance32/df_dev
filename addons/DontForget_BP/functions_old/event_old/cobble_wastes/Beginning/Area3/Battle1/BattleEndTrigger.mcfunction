@@ -1,0 +1,2 @@
+execute if score EVENT_CW_Beginning_Area3_Battle1_WaveCountdown timer matches -1 if score EVENT_CW_Beginning_Area3_Battle1_PlayerAmount counter matches 0 run function dontforget/event/cobble_wastes/Beginning/Area3/Battle1/BattleEnd
+execute if score EVENT_CW_Beginning_Area3_Battle1_WaveCountdown timer matches -1 if score EVENT_CW_Beginning_Area3_Battle1_PlayerAmount counter matches 1.. if score EVENT_CW_Beginning_Area3_Battle1_CurrentWave counter > EVENT_CW_Beginning_Area3_Battle1_Wave counter run function dontforget/event/cobble_wastes/Beginning/Area3/Battle1/BattleEndWin

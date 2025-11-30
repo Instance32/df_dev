@@ -1,0 +1,1 @@
+execute if block 74 39 1 ladder ["facing_direction"=4] if block 74 40 1 ladder ["facing_direction"=4] if block 74 41 1 ladder ["facing_direction"=4] if block 74 42 1 ladder ["facing_direction"=4] run function dontforget/event/cobble_wastes/beginning/area3/TriggerEvent4

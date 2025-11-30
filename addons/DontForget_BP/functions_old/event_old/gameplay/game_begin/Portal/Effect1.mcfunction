@@ -1,0 +1,1 @@
+titleraw @a[tag=game_player,tag=EVENT_GP_GameBegin.is_close_to_portal] actionbar {"rawtext":[{"translate":"Put ender eyes on frames"}]}

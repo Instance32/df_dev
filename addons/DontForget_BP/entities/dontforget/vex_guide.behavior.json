@@ -1,0 +1,47 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dontforget:vex_guide",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+		    "minecraft:is_hidden_when_invisible": {
+            },
+            "minecraft:fire_immune": {
+            },
+            "minecraft:health": {
+                "value": 14
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+		    "minecraft:collision_box": {
+                "width": 0.4,
+                "height": 0.8
+            },
+            "minecraft:scale": {
+                "value": 1.2
+            },
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:game_event_movement_tracking": {
+                "emit_move": false,
+                "emit_swim": false
+            }
+		}
+	}
+}

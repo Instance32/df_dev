@@ -1,0 +1,1 @@
+execute if block 35 69 -10 lever ["lever_direction"="up_north_south","open_bit"=true] run function dontforget/event/cobble_wastes/beginning/area2/TriggerEvent3

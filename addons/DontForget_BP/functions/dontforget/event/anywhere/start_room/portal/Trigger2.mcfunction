@@ -1,0 +1,1 @@
+execute if score EV_AW_STARTROOM_PTL_EnderEye counter matches 12 run scoreboard players set EV_AW_STARTROOM_PTL step 3

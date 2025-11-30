@@ -1,0 +1,1 @@
+execute in overworld run tp @s 34 75 22

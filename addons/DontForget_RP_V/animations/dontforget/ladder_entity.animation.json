@@ -1,0 +1,49 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ladder_entity.laying": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [-90, 0, 0]
+				}
+			}
+		},
+		"animation.ladder_entity.standing": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.ladder_entity.lay_down": {
+			"animation_length": 0.25,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": [-5, 0, 0],
+						"0.0833": [-20, 0, 0],
+						"0.125": [-45, 0, 0],
+						"0.1667": [-90, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.ladder_entity.stand_up": {
+			"animation_length": 0.25,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [-90, 0, 0],
+						"0.0417": [-45, 0, 0],
+						"0.0833": [-20, 0, 0],
+						"0.125": [-5, 0, 0],
+						"0.1667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

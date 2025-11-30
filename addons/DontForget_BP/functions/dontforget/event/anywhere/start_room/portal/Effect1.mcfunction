@@ -1,0 +1,1 @@
+titleraw @a[tag=game_player,tag=EV_AW_STARTROOM.is_close_to_portal] actionbar {"rawtext":[{"translate":"Put ender eyes on frames"}]}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.saving_orb.states": {
+			"initial_state": "inactive",
+			"states": {
+				"activing": {
+					"animations": ["active"],
+					"transitions": [
+						{"actived": "query.any_animation_finished"}
+					]
+				},
+				"actived": {
+					"animations": ["idle"],
+					"blend_transition": 0.25
+				},
+				"inactive": {
+					"animations": ["inactive"],
+					"transitions": [
+						{"activing": "q.variant == 1"},
+						{"actived": "q.variant == 2"}
+					]
+				}
+			}
+		}
+	}
+}

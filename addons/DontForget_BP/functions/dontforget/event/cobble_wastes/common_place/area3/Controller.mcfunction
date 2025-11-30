@@ -1,0 +1,1 @@
+execute if score EV_CW_CMP_Area3_Trigger1 step matches 0 if score TICK timer matches 20 run function dontforget/event/cobble_wastes/common_place/area3/Trigger1

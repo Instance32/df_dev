@@ -1,0 +1,1 @@
+execute if score EVENT_CW_AbandonedTransport_Area7_Trigger1 step matches 0 run function dontforget/event/cobble_wastes/AbandonedTransport/Area7/Trigger1

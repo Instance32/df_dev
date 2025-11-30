@@ -1,0 +1,4 @@
+scoreboard players set GL_EndlessTower_CurrentWave counter 0
+
+scoreboard players set GL_EndlessTower_CurrentWaveEnemy counter 0
+scoreboard players set GL_EndlessTower_SummonEnemyTime counter 0

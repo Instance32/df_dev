@@ -1,0 +1,733 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dontforget:steven",
+			"runtime_identifier": "minecraft:villager",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+			    "dontforget:steven_age": {
+					"type": "enum",
+					"values": [ "adult", "baby" ],
+					"client_sync": true,
+					"default": "adult"
+				},
+				"dontforget:steven_general_state": {
+					"type": "enum",
+					"values": [ "standing", "seated", "lying" ],
+					"client_sync": true,
+					"default": "standing"
+				},
+				"dontforget:steven_arm_state": {
+					"type": "enum",
+					"values": [ "idle", "arched", "raise" ],
+					"client_sync": true,
+					"default": "idle"
+				},
+				"dontforget:steven_profession": {
+					"type": "enum",
+					"values": [ "npc", "unskilled", "blacksmith" ],
+					"client_sync": true,
+					"default": "unskilled"
+				},
+				"dontforget:is_in_dialog": {
+					"type": "bool",
+					"client_sync": true,
+					"default": false
+				},
+				"dontforget:is_following_nodes": {
+					"type": "bool",
+					"client_sync": true,
+					"default": false
+				}
+			}
+		},
+		"component_groups": {
+			"dontforget:npc": {
+				"minecraft:npc": {
+					"npc_data": {
+						"portrait_offsets": {
+							"translate": [-7, 50, 0],
+							"scale": [1.75, 1.75, 1.75]
+						},
+						"picker_offsets": {
+							"translate": [0, 20, 0],
+							"scale": [1.7, 1.7, 1.7]
+						}
+					}
+				}
+			},
+			"dontforget:common_behavior": {
+    			"minecraft:behavior.float": {
+    				"priority": 0
+    			},
+    			"minecraft:behavior.trade_with_player": {
+    				"priority": 2
+    			},
+    			"minecraft:behavior.pickup_items": {
+    				"priority": 4,
+    				"max_dist": 3,
+    				"goal_radius": 2,
+    				"speed_multiplier": 0.5,
+    				"can_pickup_to_hand_or_equipment": false
+    			},
+    			"minecraft:behavior.look_at_trading_player": {
+    				"priority": 7
+    			},
+    			"minecraft:behavior.look_at_player": {
+    				"priority": 8,
+    				"look_distance": 8,
+    				"probability": 0.02
+    			},
+    			"minecraft:behavior.share_items": {
+    				"priority": 9,
+    				"max_dist": 3,
+    				"goal_radius": 2,
+    				"speed_multiplier": 0.5,
+    				"entity_types": [{
+    					"filters": {
+    						"test": "is_family",
+    						"subject": "other",
+    						"value": "villager"
+    					}
+    				}]
+    			}
+			},
+			"dontforget:follow_nodes": {
+                "minecraft:attack": {
+                    "damage": 0
+                },
+                "minecraft:behavior.melee_box_attack": {
+                    "priority": 1,
+                    "speed_multiplier": 0.6
+                },
+                "minecraft:behavior.look_at_target": {
+                    "priority": 2
+                },
+                "minecraft:behavior.nearest_prioritized_attackable_target": {
+                    "priority": 3,
+                    "must_see": false,
+                    "within_radius": 48.0,
+                    "reselect_targets": true,
+                    "must_see_forget_duration": 17.0,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family", "subject": "other", "value": "marker"
+                                    },
+                                    {
+                                        "test": "has_tag", "subject": "other", "value": "steven_node"
+                                    }
+                                ]
+                            },
+                            "max_dist": 64
+                        }
+                    ]
+                },
+       			"minecraft:entity_sensor": {
+                    "subsensors": [
+                        {
+                            "range": [64, 64],
+                            "cooldown": -1,
+                            "require_all": false,
+                            "event_filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family", "subject": "other", "value": "marker"
+                                    },
+                                    {
+                                        "test": "has_tag", "subject": "other", "value": "steven_node"
+                                    },
+                                    {
+                                        "test": "target_distance", "subject": "self", "operator": "<", "value": 2.00
+                                    }
+                                
+                                ]
+                            },
+                            "event": "dontforget:npc.stop_following_nodes"
+                        }
+                    ]
+                }
+			},
+			"dontforget:wandering": {
+    			"minecraft:behavior.random_stroll": {
+    				"priority": 10,
+    				"speed_multiplier": 0.6,
+                    "xy_dist": 7,
+                    "y_dist": 3
+       			},
+                "minecraft:behavior.nearest_prioritized_attackable_target": {
+                    "priority": 3,
+                    "must_see": false,
+                    "within_radius": 48.0,
+                    "reselect_targets": true,
+                    "must_see_forget_duration": 17.0,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family", "subject": "other", "value": "marker"
+                                    },
+                                    {
+                                        "test": "has_tag", "subject": "other", "value": "steven_node"
+                                    }
+                                ]
+                            },
+                            "max_dist": 64
+                        }
+                    ]
+                },
+       			"minecraft:entity_sensor": {
+                    "subsensors": [
+                        {
+                            "range": [64, 64],
+                            "cooldown": 1,
+                            "require_all": false,
+                            "event_filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family", "subject": "other", "value": "marker"
+                                    },
+                                    {
+                                        "test": "has_tag", "subject": "other", "value": "steven_node"
+                                    },
+                                    {
+                                        "test": "target_distance", "subject": "self", "operator": ">=", "value": 2.00
+                                    }
+                                
+                                ]
+                            },
+                            "event": "dontforget:npc.start_following_nodes"
+                        }
+                    ]
+                }
+			},
+			"dontforget:standing": {
+    			"minecraft:collision_box": {
+    				"width": 0.6,
+    				"height": 1.9
+    			},
+				"minecraft:behavior.hide": {
+    				"priority": 1,
+    				"speed_multiplier": 0.8,
+    				"poi_type": "bed",
+    				"duration": 30
+    			},
+    			"minecraft:behavior.move_indoors": {
+    				"priority": 6,
+    				"speed_multiplier": 0.8,
+    				"timeout_cooldown": 8
+    			}
+			},
+			"dontforget:seated": {
+			    "minecraft:collision_box": {
+    				"width": 0.6,
+    				"height": 1.5
+    			}
+			},
+			"dontforget:idle_arms": {
+			},
+			"dontforget:arched_arms": {
+			},
+			"dontforget:trade_resupply_components": {
+				"minecraft:trade_resupply": {}
+			},
+			"dontforget:unskilled": {
+				"minecraft:type_family": {
+					"family": ["villager", "peasant", "mob"]
+				},
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:dweller": {
+					"dwelling_type": "village",
+					"dweller_role": "inhabitant",
+					"update_interval_base": 60,
+					"update_interval_variant": 40,
+					"can_find_poi": true,
+					"can_migrate": true,
+					"first_founding_reward": 5
+				}
+			},
+			"dontforget:unskilled_can_interact": {
+				"minecraft:interact": {
+					"interactions": [{
+						"on_interact": {
+							"event": "dontforget:npc.open_dialog"
+						},
+						"interact_text": "action.npc.dialog"
+					}]
+				},
+				"minecraft:pushable": {
+				    "is_pushable": true,
+				    "is_pushable_by_piston": true
+			    }
+			},
+			"dontforget:blacksmith": {
+				"minecraft:type_family": {
+					"family": ["villager", "blacksmith", "armorer", "mob"]
+				},
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:behavior.trade_interest": {
+					"priority": 5,
+					"within_radius": 6,
+					"interest_time": 45,
+					"remove_item_time": 1,
+					"carried_item_switch_time": 2,
+					"cooldown": 2
+				},
+				"minecraft:dweller": {
+					"dwelling_type": "village",
+					"dweller_role": "inhabitant",
+					"preferred_profession": "armorer",
+					"update_interval_base": 60,
+					"update_interval_variant": 40,
+					"can_find_poi": true,
+					"can_migrate": true,
+					"first_founding_reward": 5
+				}
+			},
+			"dontforget:blacksmith_can_interact": {
+				"minecraft:economy_trade_table": {
+					"display_name": "entity.steven.name",
+					"table": "trading/dontforget/steven_trades.json",
+					"new_screen": true,
+					"persist_trades": true
+				},
+				"minecraft:interact": {
+					"interactions": [{
+						"on_interact": {
+							"filters": {
+								"all_of": [{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "hand",
+									"subject": "other",
+									"operator": "!=",
+									"value": "minecraft:emerald"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "hand",
+									"subject": "other",
+									"operator": "!=",
+									"value": "minecraft:emerald_block"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "hand",
+									"subject": "other",
+									"operator": "!=",
+									"value": "minecraft:paper"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "hand",
+									"subject": "other",
+									"operator": "!=",
+									"value": "minecraft:book"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "hand",
+									"subject": "other",
+									"operator": "!=",
+									"value": "minecraft:potion"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "hand",
+									"subject": "other",
+									"operator": "!=",
+									"value": "minecraft:pumpkin_pie"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "hand",
+									"subject": "other",
+									"operator": "!=",
+									"value": "minecraft:iron_ingot"
+								},
+								{
+									"test": "has_equipment",
+									"domain": "hand",
+									"subject": "other",
+									"operator": "!=",
+									"value": "minecraft:gold_ingot"
+								}]
+							},
+							"event": "dontforget:npc.open_dialog"
+						},
+						"interact_text": "action.npc.dialog"
+					}]
+				},
+				"minecraft:pushable": {
+				    "is_pushable": true,
+				    "is_pushable_by_piston": true
+			    }
+			},
+			"dontforget:baby": {
+				"minecraft:is_baby": {},
+				"minecraft:scale": {
+					"value": 0.5
+				},
+				"minecraft:ageable": {
+					"duration": 12000,
+					"grow_up": {
+						"event": "minecraft:ageable_grow_up",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.take_flower": {
+					"priority": 9
+				}
+			},
+			"dontforget:adult": {
+				"minecraft:behavior.take_flower": {
+					"priority": 9
+				}
+			}
+		},
+		"components": {
+			"minecraft:skin_id": {
+				"value": 0
+			},
+			"minecraft:mark_variant": {
+				"value": 0
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:hide": {},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": false,
+				"always_show": false
+			},
+			"minecraft:movement": {
+				"value": 0.3
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:navigation.walk": {
+                "can_walk": true,
+                "can_jump": true,
+                "can_swim": true,
+                "can_sink": false,
+				"can_path_over_water": true,
+				"can_pass_doors": true,
+				"can_open_doors": true,
+				"is_amphibious": true
+			},
+			"minecraft:annotation.open_door": {},
+			"minecraft:inventory": {
+				"inventory_size": 8,
+				"private": true
+			},
+			"minecraft:persistent": {},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+					    "dontforget:common_behavior",
+					    "dontforget:wandering",
+						"dontforget:unskilled",
+						"dontforget:adult",
+						"dontforget:standing",
+						"dontforget:idle_arms"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"function dontforget/lib/entity/npc/steven/main/InitUnskilled"
+					],
+					"target": "self"
+				},
+				"set_property": {
+					"dontforget:steven_profession": "unskilled"
+				}
+			},
+			"dontforget:npc.spawn_with_no_behavior": {
+				"add": {
+					"component_groups": [
+						"dontforget:standing",
+						"dontforget:idle_arms"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"function dontforget/lib/entity/npc/steven/main/Init"
+					],
+					"target": "self"
+				}
+			},
+			"dontforget:npc.as_npc": {
+				"add": {
+					"component_groups": [
+						"dontforget:npc"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"function dontforget/lib/entity/npc/steven/main/InitNPC"
+					],
+					"target": "self"
+				},
+				"set_property": {
+					"dontforget:steven_profession": "npc"
+				}
+			},
+			"dontforget:npc.resupply_trades": {
+				"add": {
+					"component_groups": [
+						"dontforget:trade_resupply_components"
+					]
+				}
+			},
+			"dontforget:npc.open_dialog": {
+				"remove": {
+					"component_groups": [
+						"dontforget:unskilled_can_interact",
+						"dontforget:blacksmith_can_interact"
+					]
+				},
+				"sequence": [
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/steven/effect/OpenDialogSelf"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/steven/effect/OpenDialogOther"
+                            ],
+                            "target": "other"
+                        }
+                    }
+                ],
+				"set_property": {
+					"dontforget:is_in_dialog": true
+				}
+			},
+			"dontforget:npc.close_dialog": {
+				"sequence": [
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/steven/effect/CloseDialogSelf"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/steven/effect/CloseDialogOther"
+                            ],
+                            "target": "other"
+                        }
+                    }
+                ],
+				"set_property": {
+					"dontforget:is_in_dialog": false
+				}
+			},
+			"dontforget:npc.as_unskilled": {
+				"remove": {
+					"component_groups": [
+						"dontforget:blacksmith",
+						"dontforget:blacksmith_can_interact"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:unskilled",
+						"dontforget:unskilled_can_interact"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"function dontforget/lib/entity/npc/steven/main/InitUnskilled"
+					],
+					"target": "self"
+				},
+				"set_property": {
+					"dontforget:steven_profession": "unskilled"
+				}
+			},
+			"dontforget:npc.as_blacksmith": {
+				"remove": {
+					"component_groups": [
+						"dontforget:unskilled",
+						"dontforget:unskilled_can_interact"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:blacksmith",
+						"dontforget:blacksmith_can_interact"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"function dontforget/lib/entity/npc/steven/main/InitBlacksmith"
+					],
+					"target": "self"
+				},
+				"set_property": {
+					"dontforget:steven_profession": "blacksmith"
+				}
+			},
+			"dontforget:npc.as_baby": {
+				"remove": {
+					"component_groups": [
+						"dontforget:adult"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:baby"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"function dontforget/lib/entity/npc/steven/main/InitBlacksmith"
+					],
+					"target": "self"
+				},
+				"set_property": {
+					"dontforget:steven_age": "baby"
+				}
+			},
+			"dontforget:npc.as_adult": {
+				"remove": {
+					"component_groups": [
+						"dontforget:baby"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:adult"
+					]
+				},
+				"set_property": {
+					"dontforget:steven_age": "adult"
+				}
+			},
+			"dontforget:npc.sit_down": {
+			    "remove": {
+					"component_groups": [
+						"dontforget:standing"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:seated"
+					]
+				},
+				"set_property": {
+					"dontforget:steven_general_state": "seated"
+				}
+			},
+			"dontforget:npc.stand_up": {
+			    "remove": {
+					"component_groups": [
+						"dontforget:seated"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:standing"
+					]
+				},
+				"set_property": {
+					"dontforget:steven_general_state": "standing"
+				}
+			},
+			"dontforget:npc.shrink_arms": {
+			    "remove": {
+					"component_groups": [
+						"dontforget:idle_arms"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:arched_arms"
+					]
+				},
+				"set_property": {
+					"dontforget:steven_arm_state": "arched"
+				}
+			},
+			"dontforget:npc.expand_arms": {
+			    "remove": {
+					"component_groups": [
+						"dontforget:arched_arms"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:idle_arms"
+					]
+				},
+				"set_property": {
+					"dontforget:steven_arm_state": "idle"
+				}
+			},
+			"dontforget:npc.start_following_nodes": {
+			    "remove": {
+					"component_groups": [
+						"dontforget:wandering"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:follow_nodes"
+					]
+				},
+				"set_property": {
+					"dontforget:is_following_nodes": true
+				}
+			},
+			"dontforget:npc.stop_following_nodes": {
+				"remove": {
+					"component_groups": [
+						"dontforget:follow_nodes"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dontforget:wandering"
+					]
+				},
+				"set_property": {
+					"dontforget:is_following_nodes": false
+				}
+			}
+		}
+	}
+}

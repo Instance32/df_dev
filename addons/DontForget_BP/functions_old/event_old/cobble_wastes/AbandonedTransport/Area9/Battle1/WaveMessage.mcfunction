@@ -1,0 +1,1 @@
+#titleraw @a[tag=debugger] actionbar {"rawtext":[{"translate":"text.battle.enemy_amount"},{"score":{"name":"EVENT_CW_AbandonedTransport_Area9_Battle1_EnemyAmount","objective":"counter"}}]}

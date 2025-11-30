@@ -1,0 +1,1 @@
+execute if score EV_LC step matches 0..1 run function dontforget/event/lush_cave/main/Controller

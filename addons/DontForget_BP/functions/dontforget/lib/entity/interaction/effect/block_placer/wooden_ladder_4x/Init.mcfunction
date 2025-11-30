@@ -1,0 +1,1 @@
+tag @s add block_placer.ladder_4x

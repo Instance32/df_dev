@@ -1,0 +1,183 @@
+pack.name=Don't Forget Resource Pack - Visual
+pack.description=Made by AXAlad257 / SuperCuter32 / Zongzi0396
+
+
+
+
+entity.dontforget:marker.name=Marker
+entity.dontforget:saving_orb.name=Saving Orb
+entity.dontforget:wooden_elevator.name=Wooden Elevator
+entity.dontforget:wooden_ladder_4x_entity.name=Ladder
+entity.dontforget:steven.name=Steven
+entity.dontforget:vex_guide.name=Vex Guide
+
+entity.dontforget:zombie.miner.name=Zombie Miner
+entity.dontforget:zombie.miner_leader.name=Zombie Miner Leader
+entity.dontforget:zombie.armored.name=Armored Zombie
+entity.dontforget:zombie.armored_with_sword.name=Elite Armored Zombie
+entity.dontforget:zombie.armored_leader.name=Armored Zombie Leader
+
+entity.dontforget:skeleton.armored.name=Armored Skeleton Archer
+entity.dontforget:skeleton.armored_leader.name=Armored Skeleton Archer Leader
+
+
+
+
+action.interaction.clean=Clean
+action.interaction.confirm=Confirm
+action.interaction.destroy=Destroy
+action.interaction.place=Place
+action.npc.dialog=Chat
+action.saving_orb.active=Active
+action.saving_orb.save=Save
+action.wooden_ladder.pick_up=Pick Up
+
+
+
+
+item.dontforget:entity_remover=Entity Remover
+item.dontforget:wooden_ladder_4x_item=Ladder
+item.dontforget:miner_helmet=Miner Helmet
+item.dontforget:miner_leader_helmet=Miner Leader Helmet
+item.dontforget:saving_crystal.name=Saving Crystal
+
+item.spawn_egg.entity.dontforget:saving_orb.name=Saving Orb Spawn Egg
+item.spawn_egg.entity.dontforget:steven.name=Steven Spawn Egg
+item.spawn_egg.entity.dontforget:vex_guide.name=Spawn Vex Guide
+
+
+
+
+text.title.enter_area=§fNEW AREA ENTERED§r
+text.title.enter_area.cobble_wastes=§l§8- Cobble Wastes -§r
+text.title.enter_area.lush_cave=§l§2- Lush Cave -§r
+text.title.enter_area.redstone_mineshaft=§l§c- Redstone Mineshaft -§r
+
+text.title.enter_subarea=§fNEW SUBAREA ENTERED§r
+text.title.enter_subarea.cobble_wastes.transport=§8- Abandoned Transportation -§r
+text.title.enter_subarea.lush_cave.forest=§2- Mysterious Forest -§r
+text.title.enter_subarea.redstone_mineshaft=§c- Redstone Mineshaft -§r
+
+
+
+
+text.dialog.debug.prefix=§l§2DEBUG >> §r
+text.dialog.debug.run_function=§2Run function: §a
+
+text.dialog.hint.prefix=§l§eHINT >> §r
+text.dialog.hint.collect_ladder_1=§aTry to find some ladders
+text.dialog.hint.collect_ladder_2=§aNeed §e4§a ladders
+text.dialog.hint.pull_lever_0=§aPull down the levers§r
+text.dialog.hint.count_lever_0=§aLever pulled [0/2]§r
+text.dialog.hint.count_lever_1=§aLever pulled [1/2]§r
+text.dialog.hint.count_lever_2=§aLever pulled [2/2]§r
+text.dialog.hint.sprint_1=§aDouble click the §eForward Button§a to sprint
+text.dialog.hint.sprint_2=§aYou can reach further places by sprinting
+text.dialog.hint.open_chest_1=§aOpen the chest nearby
+text.dialog.hint.open_chest_2=§aThere are chests everywhere in the world
+text.dialog.hint.open_chest_3=§aMaybe you can find food or tools in them
+
+text.dialog.objective.prefix=§l§eObjective >> §r
+text.dialog.objective.prefix_new=§l§b[NEW]§r
+text.dialog.objective.c0_1=§bExplore around and find the exit
+text.dialog.objective.c0_2=§bAmbush! Defeat enemies
+text.dialog.objective.c1_1=§bExplore the Lush Cave
+text.dialog.objective.c1_2=§bAmbush! Defeat enemies
+
+
+text.dialog.myself.silent=§l§f......
+text.dialog.kallet.silent=§6......
+
+text.dialog.speaker.intro=[Distant Echo] 
+text.dialog.speaker.kallet=[Kallet] 
+text.dialog.speaker.kallet_first_meeting=[Kid] 
+text.dialog.speaker.unknown=[???] 
+
+text.dialog.vex_guide.encounter_1=* A strange crying *
+text.dialog.vex_guide.encounter_2=What an OUTLANDISH face!
+text.dialog.vex_guide.encounter_3=Well, relax, I just came over...
+text.dialog.vex_guide.encounter_4=To say hello.
+text.dialog.vex_guide.encounter_5=Welcome!
+text.dialog.vex_guide.encounter_6=I'm Vex, a little guide here.
+text.dialog.vex_guide.encounter_7=Really want to explore this world, right?
+text.dialog.vex_guide.encounter_8=* Laughing *
+text.dialog.vex_guide.encounter_9=Follow me, I'll show you something.
+text.dialog.vex_guide.encounter_10=Look, a mysterious base...
+text.dialog.vex_guide.encounter_11=Interact with the base by using what I gave you.
+text.dialog.vex_guide.encounter_12=WONDERFUL!!
+text.dialog.vex_guide.encounter_13=You can save your profile in this way, wherever you are, if the SAVING ORB is nearby.
+text.dialog.vex_guide.encounter_14=You will find it again in your future journey.
+text.dialog.vex_guide.encounter_15a=RUDE.
+text.dialog.vex_guide.encounter_15b=Well, let's move on.
+text.dialog.vex_guide.encounter_16a=You IGNORED me.
+text.dialog.vex_guide.encounter_16b=Are you too blind to see where I am?
+text.dialog.vex_guide.encounter_16c=You just want my crystal.
+text.dialog.vex_guide.encounter_17a=Heh, gross...
+text.dialog.vex_guide.encounter_17b=Take care, little explorer...
+text.dialog.vex_guide.encounter_18a=Fine, that's it. We'll meet above.
+text.dialog.vex_guide.encounter_18b=We'll meet above.
+
+text.dialog.steven.encounter_1=Stop.
+text.dialog.steven.encounter_2=Who... oh.
+text.dialog.steven.encounter_3=You aren't like them. I've never seen you before.
+text.dialog.steven.encounter_4=And there's no smell of flesh or bone on you.
+text.dialog.steven.encounter_5=Hmm...
+text.dialog.steven.encounter_5_choice_a=I'm a human.
+text.dialog.steven.encounter_5_choice_b=Please don't kill me!
+text.dialog.steven.encounter_5_choice_c=...
+text.dialog.steven.encounter_5_answer_a1=Wait what?
+text.dialog.steven.encounter_5_answer_a2=Oh, looks like there is a misunderstanding.
+text.dialog.steven.encounter_5_answer_a3=My apology.
+text.dialog.steven.encounter_5_answer_b1=* Laughing *
+text.dialog.steven.encounter_5_answer_b2=I'm not planning to kill you.
+text.dialog.steven.encounter_5_answer_b3=I'm sorry if I scared you.
+text.dialog.steven.encounter_5_answer_c1=All right. You are a human.
+text.dialog.steven.encounter_5_answer_c2=I won't kill my siblings, for conscience' sake.
+text.dialog.steven.encounter_5_answer_c3=I'm sorry if I scared you.
+text.dialog.steven.encounter_6=Well, I was making ladders here.
+text.dialog.steven.encounter_7=Those ladders, which lead to the way above, were broken.
+text.dialog.steven.encounter_8=So I'm trapped here. I guess we're the same.
+text.dialog.steven.encounter_8_choice_a1=I've seen a ladder before.
+text.dialog.steven.encounter_8_choice_a2=It lied in a ruins.
+text.dialog.steven.encounter_8_choice_b=...
+text.dialog.steven.encounter_8_answer_a1=The ruins?
+text.dialog.steven.encounter_8_answer_a2=No wonder you're different.
+text.dialog.steven.encounter_8_answer_a3=You must be from another world, didn't you?
+text.dialog.steven.encounter_8_answer_a4=Haha, joking.
+text.dialog.steven.encounter_9=Oh, ladders done.
+text.dialog.steven.encounter_10=I have to go back to my shop. It built on the top here.
+text.dialog.steven.encounter_11=Come and sit if you're interested in it.
+
+
+
+
+
+
+text.battle.prefix=§l§cBATTLE >> §r
+text.battle.battle_begin=§aBattle begins§r
+text.battle.battle_begin_ready=§aBattle is about to begin§r
+text.battle.battle_begin_caution=§aBe careful of the Ambush!§r
+text.battle.battle_end=§aBattle Defeated§r
+text.battle.battle_end_win=§aBattle Won§r
+text.battle.wave_current=§aWave§r
+text.battle.wave_begin=§aWave begins§r
+text.battle.wave_end=§aWave ended§r
+text.battle.current_wave_enemy_killed=§aEnemies killed
+text.battle.enemy_amount=§aEnemy Amount: §r
+text.battle.atk_increase='s ATK increased!
+text.battle.atk_decrease='s ATK decreased!
+text.battle.def_increase='s DEF increased!
+text.battle.def_decrease='s DEF decreased!
+
+
+
+
+text.entity.player.profile_saved=§aProfile saved§r
+text.entity.player.skill.cooldown_end=§aSkill is available now
+text.entity.player.skill.fighter_activate= pulled out his sword!
+text.entity.player.skill.healer_activate= chanted a song!
+text.entity.player.skill.mage_activate= cast a spell!
+text.entity.player.skill.loner_activate= whispered secretly!
+
+
+

@@ -1,0 +1,1 @@
+scoreboard players set EV_CW_BGN_Area3_Act1 step 1

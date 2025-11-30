@@ -1,0 +1,1 @@
+execute if score EV_CW_CMP_Area1 step matches 1 if score EV_CW_CMP_Area2 step matches 2 if score EV_CW_CMP_Area3 step matches 2 if score EV_CW_CMP_Area4 step matches 1 if score EV_CW_CMP_Area5 step matches 3 if score EV_CW_CMP_Area6 step matches 1 if score EV_CW_CMP_Area7 step matches 1 run function dontforget/event/cobble_wastes/common_place/Clear

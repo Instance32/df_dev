@@ -1,0 +1,33 @@
+gamerule commandblockoutput false
+gamerule commandblocksenabled true
+gamerule dodaylightcycle false
+gamerule doentitydrops false
+gamerule dofiretick false
+gamerule doimmediaterespawn true
+gamerule doinsomnia false
+gamerule domobloot true
+gamerule domobspawning false
+gamerule dotiledrops false
+gamerule doweathercycle false
+gamerule drowningdamage false
+gamerule falldamage false
+gamerule firedamage false
+gamerule freezedamage false
+gamerule functioncommandlimit 10000
+gamerule keepinventory true
+gamerule maxcommandchainlength 65536
+gamerule mobgriefing false
+gamerule naturalregeneration false
+gamerule pvp false
+gamerule randomtickspeed 0
+gamerule respawnblocksexplode false
+gamerule sendcommandfeedback false
+gamerule showbordereffect false
+gamerule showcoordinates true
+gamerule showtags false
+gamerule spawnradius 0
+gamerule tntexplodes false
+difficulty normal
+time set noon
+weather clear
+mobevent events_enabled false

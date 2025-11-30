@@ -1,0 +1,2 @@
+execute if entity @s[has_property={dontforget:steven_profession="unskilled"}] run event entity @s dontforget:npc.as_unskilled
+execute if entity @s[has_property={dontforget:steven_profession="blacksmith"}] run event entity @s dontforget:npc.as_blacksmith

@@ -1,0 +1,9 @@
+execute if entity @s[tag=spawner.zombie1] run summon zombie ~~~ ~~ dontforget:enemy.as_zombie1
+execute if entity @s[tag=spawner.zombie2] run summon zombie ~~~ ~~ dontforget:enemy.as_zombie2
+execute if entity @s[tag=spawner.zombie3] run summon zombie ~~~ ~~ dontforget:enemy.as_zombie3
+execute if entity @s[tag=spawner.zombie4] run summon zombie ~~~ ~~ dontforget:enemy.as_zombie4
+execute if entity @s[tag=spawner.zombie5] run summon zombie ~~~ ~~ dontforget:enemy.as_zombie5
+execute if entity @s[tag=spawner.zombie6] run summon zombie ~~~ ~~ dontforget:enemy.as_zombie6
+execute if entity @s[tag=spawner.skeleton1] run summon skeleton ~~~ ~~ dontforget:enemy.as_skeleton1
+execute if entity @s[tag=spawner.skeleton2] run summon skeleton ~~~ ~~ dontforget:enemy.as_skeleton2
+execute if entity @s[tag=spawner.skeleton3] run summon skeleton ~~~ ~~ dontforget:enemy.as_skeleton3

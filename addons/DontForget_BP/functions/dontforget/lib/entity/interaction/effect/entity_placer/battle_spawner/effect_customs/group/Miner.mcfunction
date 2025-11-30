@@ -1,0 +1,1 @@
+effect @s slowness 60000 1 true

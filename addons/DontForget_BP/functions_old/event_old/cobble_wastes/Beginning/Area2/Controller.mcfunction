@@ -1,0 +1,2 @@
+execute if score EVENT_CW_Beginning_Area2_Trigger1 step matches 0 if score TICK timer matches 20 run function dontforget/event/cobble_wastes/Beginning/Area2/Trigger1
+execute if score EVENT_CW_Beginning_Area2_Repeat1 step matches 0 if score TICK timer matches 20 run function dontforget/event/cobble_wastes/Beginning/Area2/Repeat1

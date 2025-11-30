@@ -1,0 +1,17 @@
+,
+        {
+          "description": "pack.description",
+            "type": "script",
+            "uuid": "270d906b-675c-6653-2f5b-4f189cb3cfd1",
+            "version": [1, 9, 0],
+            "entry": "scripts/main.js"
+        }
+
+
+,
+    "dependencies": [
+        {
+            "uuid": "66c6e9a8-cc32-462a-9c36-dbb052165822",
+            "version": [0, 0, 1]
+        }
+    ]

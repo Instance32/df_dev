@@ -1,0 +1,2 @@
+execute as @s at @s at @e[tag=enemy,c=1,r=16] run execute positioned ^^^4 run function resource/entity/player.obj/skill/mage/damage
+tellraw @a {"rawtext":[{"selector":"@s"},{"translate":"text.entity.player.skill.mage_activate"}]}

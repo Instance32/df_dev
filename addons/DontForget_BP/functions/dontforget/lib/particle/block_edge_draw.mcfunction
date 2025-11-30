@@ -1,0 +1,12 @@
+particle dontforget:block_edge_draw_x ~-0.5 ~-0.0 ~-0.5
+particle dontforget:block_edge_draw_x ~-0.5 ~+0.999 ~-0.5
+particle dontforget:block_edge_draw_x ~-0.5 ~-0.0 ~+0.499
+particle dontforget:block_edge_draw_x ~-0.5 ~+0.999 ~+0.499
+particle dontforget:block_edge_draw_y ~-0.5 ~-0.0 ~-0.5
+particle dontforget:block_edge_draw_y ~+0.5 ~-0.0 ~-0.5
+particle dontforget:block_edge_draw_y ~-0.5 ~-0.0 ~+0.499
+particle dontforget:block_edge_draw_y ~+0.5 ~-0.0 ~+0.499
+particle dontforget:block_edge_draw_z ~-0.5 ~-0.0 ~-0.5
+particle dontforget:block_edge_draw_z ~+0.5 ~-0.0 ~-0.5
+particle dontforget:block_edge_draw_z ~-0.5 ~+0.999 ~-0.5
+particle dontforget:block_edge_draw_z ~+0.5 ~+0.999 ~-0.5

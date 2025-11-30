@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dontforget:brush_placeholder_1",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.dontforget.placeholder"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "dontforget.brush_placeholder_1"
+			}
+		}
+	}
+}

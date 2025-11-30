@@ -1,0 +1,1 @@
+fog @s pop fog_in_area

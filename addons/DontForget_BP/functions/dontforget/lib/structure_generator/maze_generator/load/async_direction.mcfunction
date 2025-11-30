@@ -1,0 +1,1 @@
+execute if score @s direction = @e[r=1,c=1,tag=maze_generator,tag=checker] direction run scoreboard players set @s direction 0

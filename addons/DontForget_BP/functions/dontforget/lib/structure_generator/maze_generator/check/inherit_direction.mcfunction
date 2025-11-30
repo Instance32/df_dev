@@ -1,0 +1,4 @@
+execute if score @s direction matches 1 positioned ~8~~ run scoreboard players operation @e[r=1,c=1,name=maze_generator_checker] inh_direction = @s direction
+execute if score @s direction matches 2 positioned ~~~8 run scoreboard players operation @e[r=1,c=1,name=maze_generator_checker] inh_direction = @s direction
+execute if score @s direction matches 3 positioned ~-8~~ run scoreboard players operation @e[r=1,c=1,name=maze_generator_checker] inh_direction = @s direction
+execute if score @s direction matches 4 positioned ~~~-8 run scoreboard players operation @e[r=1,c=1,name=maze_generator_checker] inh_direction = @s direction

@@ -1,0 +1,68 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.miner_helmet",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root_item",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "helmet",
+					"parent": "root_item",
+					"pivot": [0, 0, 0],
+					"binding": "'head'",
+					"cubes": [
+						{
+							"origin": [-4, 6.5, -4],
+							"size": [8, 2, 8],
+							"inflate": 1,
+							"uv": {
+								"north": {"uv": [8, 0], "uv_size": [8, 3]},
+								"east": {"uv": [8, 4], "uv_size": [8, 3]},
+								"south": {"uv": [16, 0], "uv_size": [8, 3]},
+								"west": {"uv": [16, 4], "uv_size": [8, 3]},
+								"up": {"uv": [0, 0], "uv_size": [8, 8]},
+								"down": {"uv": [24, 8], "uv_size": [8, -8]}
+							}
+						},
+						{
+							"origin": [-5, 5.5, -5],
+							"size": [10, -1, 10],
+							"inflate": 1,
+							"uv": {
+								"north": {"uv": [0, 8], "uv_size": [10, 1]},
+								"east": {"uv": [0, 17], "uv_size": [10, 1]},
+								"south": {"uv": [0, 8], "uv_size": [10, 1]},
+								"west": {"uv": [0, 17], "uv_size": [10, 1]},
+								"up": {"uv": [10, 18], "uv_size": [-10, -10]},
+								"down": {"uv": [0, 18], "uv_size": [10, -10]}
+							}
+						},
+						{
+							"origin": [-3, 4.5, -6],
+							"size": [6, 6, 1],
+							"inflate": -1,
+							"uv": {
+								"north": {"uv": [18, 8], "uv_size": [6, 6]},
+								"east": {"uv": [10, 8], "uv_size": [1, 6]},
+								"south": {"uv": [10, 8], "uv_size": [6, 6]},
+								"west": {"uv": [10, 8], "uv_size": [1, 6]},
+								"up": {"uv": [10, 8], "uv_size": [6, 1]},
+								"down": {"uv": [10, 14], "uv_size": [6, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

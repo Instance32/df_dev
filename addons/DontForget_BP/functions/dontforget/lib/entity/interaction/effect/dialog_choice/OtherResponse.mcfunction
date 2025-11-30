@@ -1,0 +1,1 @@
+function dontforget/lib/entity/player/dialog_choice/Clear

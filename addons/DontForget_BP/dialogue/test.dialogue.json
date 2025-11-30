@@ -1,0 +1,82 @@
+{
+	"format_version": "1.14.0",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "test_scene1",
+				"npc_name": "entity.npc.name",
+				"text": {
+					"rawtext": [
+						{
+							"translate": "text.test.scene1_text1\ntext.test.scene1_text2\ntext.test.scene1_text3",
+							"with": ["\n"]
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "Switch to scene 2"
+								}
+							]
+						},
+						"commands": ["/dialogue open @s @initiator test_scene2", "say Button1 pressed."]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "Keep open"
+								}
+							]
+						},
+						"commands": ["/dialogue open @s @initiator test_scene1", "say Button2 pressed."]
+					}
+				],
+				"on_open_commands": ["say Dialogue screen opened."],
+				"on_close_commands": ["say Dialogue screen closed."]
+			},
+			{
+				"scene_tag": "test_scene2",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "entity.npc.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "text.test.scene2_text1\ntext.test.scene2_text2\ntext.test.scene2_text3",
+							"with": ["\n"]
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "Switch to scene 1"
+								}
+							]
+						},
+						"commands": ["/dialogue open @s @initiator test_scene1"]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "Close"
+								}
+							]
+						}
+					}
+				]
+			}
+		]
+	}
+}

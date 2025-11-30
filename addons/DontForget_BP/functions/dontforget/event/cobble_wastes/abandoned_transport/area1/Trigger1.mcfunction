@@ -1,0 +1,1 @@
+execute if block 98 47 -58 lever ["lever_direction"="west","open_bit"=true] run function dontforget/event/cobble_wastes/abandoned_transport/area1/TriggerEvent1

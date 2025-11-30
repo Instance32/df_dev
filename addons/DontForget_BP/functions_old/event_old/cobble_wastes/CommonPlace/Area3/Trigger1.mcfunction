@@ -1,0 +1,4 @@
+execute if score EVENT_CW_CommonPlace_Area3_Trigger1 step matches 0 unless block 13 65 24 suspicious_gravel run function dontforget/event/cobble_wastes/CommonPlace/Area3/TriggerEvent1
+execute if score EVENT_CW_CommonPlace_Area3_Trigger1 step matches 0 unless block 14 65 24 suspicious_gravel run function dontforget/event/cobble_wastes/CommonPlace/Area3/TriggerEvent1
+execute if score EVENT_CW_CommonPlace_Area3_Trigger1 step matches 0 unless block 13 65 25 suspicious_gravel run function dontforget/event/cobble_wastes/CommonPlace/Area3/TriggerEvent1
+execute if score EVENT_CW_CommonPlace_Area3_Trigger1 step matches 0 unless block 14 65 25 suspicious_gravel run function dontforget/event/cobble_wastes/CommonPlace/Area3/TriggerEvent1

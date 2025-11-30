@@ -1,0 +1,1 @@
+scoreboard objectives add exp.camera dummy

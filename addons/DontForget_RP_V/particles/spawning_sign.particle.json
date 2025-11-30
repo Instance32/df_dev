@@ -1,0 +1,51 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "dontforget:spawning_sign",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/particles"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 50,
+				"max_particles": 50
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_box": {
+				"offset": [0.5, 0, 0.5],
+				"half_dimensions": [0.5, 0, 0.5],
+				"surface_only": true,
+				"direction": "outwards"
+			},
+			"minecraft:particle_initialization": {
+				"per_update_expression": "variable.alpha = variable.particle_age/variable.particle_lifetime; variable.distance = (1-(-1*(variable.alpha)+Math.Pow((variable.alpha),2)*2));",
+				"per_render_expression": "variable.alpha = variable.particle_age/variable.particle_lifetime; variable.distance = (1-(-1*(variable.alpha)+Math.Pow((variable.alpha),2)*2));"
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "Math.Random(1.0, 1.1)"
+			},
+			"minecraft:particle_initial_speed": 0,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": ["variable.direction.x * variable.distance", "1 + variable.direction.y * variable.distance * variable.alpha", "variable.direction.z * variable.distance"]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["1.5 * (variable.particle_random_2 * 0.02 + 0.05) * (1 - (variable.particle_age/variable.particle_lifetime))", "1.5 * (variable.particle_random_2 * 0.02 + 0.05) * (1 - (variable.particle_age/variable.particle_lifetime))"],
+				"facing_camera_mode": "lookat_xyz",
+				"uv": {
+					"texture_width": 128,
+					"texture_height": 128,
+					"uv": ["Math.round(variable.particle_random_1*8)*8", 72],
+					"uv_size": [8, 8]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": ["variable.particle_random_1 * 0.6 + 0.4", "(variable.particle_random_2 * 0.6 + 0.4) * 0.3", "(variable.particle_random_2 * 0.6 + 0.4) * 0.9", 1]
+			}
+		}
+	}
+}

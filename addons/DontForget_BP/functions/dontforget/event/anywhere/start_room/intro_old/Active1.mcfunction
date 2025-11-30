@@ -1,0 +1,19 @@
+tag @a[tag=game_player,tag=EV_AW_STARTROOM.is_in_room,x=16393,y=71,z=16424,dx=30,dy=11,dz=14] add EV_AW_STARTROOM.follow_anim
+tag @a[tag=game_player] remove EV_AW_STARTROOM.adjust_anim
+tag @a[tag=game_player,tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] add EV_AW_STARTROOM.adjust_anim
+
+inputpermission set @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] camera disabled
+inputpermission set @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] movement disabled
+camera @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] set minecraft:free pos 16420 78 16431 facing 16399 78 16431
+camera @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] set minecraft:free ease 15 in_quad pos 16403 80 16431 facing 16402 79 16431
+camera @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] fade time 0 0.5 1
+camera @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] fade color 0 0 0
+execute as @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] at @s run tp @s ~~~ facing 16399 76 16431
+execute as @a[tag=EV_AW_STARTROOM.is_in_room,tag=EV_AW_STARTROOM.follow_anim] at @s run playsound block.end_portal.spawn @s 16415 78 16431 0.1 1 0
+
+scoreboard players set EV_AW_STARTROOM_CountEnderEye flag 1
+scoreboard players set EV_AW_STARTROOM_PTLAnim flag 0
+scoreboard players set EV_AW_STARTROOM_PTLAnim timer 0
+
+#DEBUG OUTPUT
+tellraw @a[tag=debugger] {"rawtext":[{"translate":"text.dialog.debug.prefix"},{"translate":"text.dialog.debug.run_function"},{"text":"dontforget/event/anywhere/start_room/portal_Anim_Active1"}]}

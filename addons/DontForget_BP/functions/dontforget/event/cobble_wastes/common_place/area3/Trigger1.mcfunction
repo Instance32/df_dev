@@ -1,0 +1,1 @@
+execute unless block 75 41 36 suspicious_gravel run function dontforget/event/cobble_wastes/common_place/area3/TriggerEvent1

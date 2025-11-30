@@ -1,0 +1,1 @@
+#execute if score EV_CW_ABTP_Area4_Trigger1 step matches 0 run function dontforget/event/cobble_wastes/abandoned_transport/area4/Trigger1

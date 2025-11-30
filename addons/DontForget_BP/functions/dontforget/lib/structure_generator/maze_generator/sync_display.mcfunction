@@ -1,0 +1,43 @@
+scoreboard players operation MG检查初始化次数 debug_output = MazeGeneratorCheckInitTime counter
+scoreboard players operation MG检查预设尝试次数 debug_output = MazeGeneratorCheckTryTime counter
+scoreboard players operation MG检查次数 debug_output = MazeGeneratorCheckTime counter
+scoreboard players operation MG检查完成次数 debug_output = MazeGeneratorCheckDoneTime counter
+scoreboard players operation MG检查预设总次数 debug_output = MazeGeneratorCheckTotalTime counter
+scoreboard players operation MG每层检查次数 debug_output = MazeGeneratorCheckPerLayerTime counter
+scoreboard players operation MG每层检查完成次数 debug_output = MazeGeneratorCheckPerLayerDoneTime counter
+scoreboard players operation MG每层检查预设总次数 debug_output = MazeGeneratorCheckPerLayerTotalTime counter
+
+scoreboard players operation MG加载初始化次数 debug_output = MazeGeneratorLoadInitTime counter
+scoreboard players operation MG加载预设尝试次数 debug_output = MazeGeneratorLoadTryTime counter
+scoreboard players operation MG加载次数 debug_output = MazeGeneratorLoadTime counter
+scoreboard players operation MG加载完成次数 debug_output = MazeGeneratorLoadDoneTime counter
+scoreboard players operation MG加载预设总次数 debug_output = MazeGeneratorLoadTotalTime counter
+scoreboard players operation MG每层加载次数 debug_output = MazeGeneratorLoadPerLayerTime counter
+scoreboard players operation MG每层加载完成次数 debug_output = MazeGeneratorLoadPerLayerDoneTime counter
+scoreboard players operation MG每层加载预设总次数 debug_output = MazeGeneratorLoadPerLayerTotalTime counter
+
+scoreboard players operation MG加载附加结构初始化次数 debug_output = MazeGeneratorLoadExtraInitTime counter
+scoreboard players operation MG加载附加结构预设尝试次数 debug_output = MazeGeneratorLoadExtraTryTime counter
+scoreboard players operation MG加载附加结构次数 debug_output = MazeGeneratorLoadExtraTime counter
+scoreboard players operation MG加载附加结构完成次数 debug_output = MazeGeneratorLoadExtraDoneTime counter
+scoreboard players operation MG加载附加结构预设总次数 debug_output = MazeGeneratorLoadExtraTotalTime counter
+scoreboard players operation MG加载走廊结构初始化次数 debug_output = MazeGeneratorLoadHallwayInitTime counter
+scoreboard players operation MG加载走廊结构预设尝试次数 debug_output = MazeGeneratorLoadHallwayTryTime counter
+scoreboard players operation MG加载走廊结构次数 debug_output = MazeGeneratorLoadHallwayTime counter
+scoreboard players operation MG加载走廊结构完成次数 debug_output = MazeGeneratorLoadHallwayDoneTime counter
+scoreboard players operation MG加载走廊结构预设总次数 debug_output = MazeGeneratorLoadHallwayTotalTime counter
+scoreboard players operation MG加载房间结构初始化次数 debug_output = MazeGeneratorLoadRoomInitTime counter
+scoreboard players operation MG加载房间结构预设尝试次数 debug_output = MazeGeneratorLoadRoomTryTime counter
+scoreboard players operation MG加载房间结构次数 debug_output = MazeGeneratorLoadRoomTime counter
+scoreboard players operation MG加载房间结构完成次数 debug_output = MazeGeneratorLoadRoomDoneTime counter
+scoreboard players operation MG加载房间结构预设总次数 debug_output = MazeGeneratorLoadRoomTotalTime counter
+scoreboard players operation MG加载特殊结构初始化次数 debug_output = MazeGeneratorLoadSpecialInitTime counter
+scoreboard players operation MG加载特殊结构预设尝试次数 debug_output = MazeGeneratorLoadSpecialTryTime counter
+scoreboard players operation MG加载特殊结构次数 debug_output = MazeGeneratorLoadSpecialTime counter
+scoreboard players operation MG加载特殊结构完成次数 debug_output = MazeGeneratorLoadSpecialDoneTime counter
+scoreboard players operation MG加载特殊结构预设总次数 debug_output = MazeGeneratorLoadSpecialTotalTime counter
+
+scoreboard players operation MG每层加载走廊结构初始化次数 debug_output = MazeGeneratorLoadHallwayPerLayerInitTime counter
+scoreboard players operation MG每层加载走廊结构次数 debug_output = MazeGeneratorLoadHallwayPerLayerTime counter
+scoreboard players operation MG每层加载走廊结构完成次数 debug_output = MazeGeneratorLoadHallwayPerLayerDoneTime counter
+scoreboard players operation MG每层加载走廊结构预设总次数 debug_output = MazeGeneratorLoadHallwayPerLayerTotalTime counter

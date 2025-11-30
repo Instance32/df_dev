@@ -1,0 +1,1 @@
+execute if score TICK timer matches 20 run scoreboard players add EVENT_GP_GameBegin_PortalAnim timer 1

@@ -1,0 +1,2 @@
+execute if score EV_AW_STARTROOM_ELV_Cycler timer matches 4.. run scoreboard players set EV_AW_STARTROOM_ELV_Cycler timer 0
+execute if score EV_AW_STARTROOM_ELV_Cycler timer matches 0..3 run scoreboard players add EV_AW_STARTROOM_ELV_Cycler timer 1

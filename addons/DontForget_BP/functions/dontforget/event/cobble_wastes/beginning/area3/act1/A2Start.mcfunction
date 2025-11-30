@@ -1,0 +1,4 @@
+scoreboard players set EV_CW_BGN_Area3_Act1_Timeline2 timer 0
+scoreboard players set EV_CW_BGN_Area3_Act1_BreakPoint2 step 0
+scoreboard players set EV_CW_BGN_Area3_Act1_BreakPoint2 timer 0
+scoreboard players set EV_CW_BGN_Area3_Act1_Plot step 1

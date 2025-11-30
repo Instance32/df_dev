@@ -1,0 +1,178 @@
+pack.name=别忘记-视觉资源包	#
+pack.description=作者：AXAlad257 / SuperCuter32 / Zongzi0396	#
+
+
+
+
+entity.dontforget:marker.name=标记	#
+entity.dontforget:saving_orb.name=存档之球	#
+entity.dontforget:wooden_elevator.name=木质电梯	#
+entity.dontforget:wooden_ladder_4x_entity.name=木梯	#
+entity.dontforget:steven.name=Steven	#
+entity.dontforget:vex_guide.name=恼鬼向导	#
+
+entity.dontforget:zombie.miner.name=矿工僵尸	#
+entity.dontforget:zombie.miner_leader.name=矿工僵尸队长	#
+entity.dontforget:zombie.armored.name=武装僵尸	#
+entity.dontforget:zombie.armored_with_sword.name=持剑武装僵尸	#
+entity.dontforget:zombie.armored_leader.name=武装僵尸队长	#
+
+entity.dontforget:skeleton.armored.name=武装骷髅弓箭手	#
+entity.dontforget:skeleton.armored_leader.name=武装骷髅弓箭手队长	#
+
+
+
+
+action.interaction.clean=扫除	#
+action.interaction.confirm=确认	#
+action.interaction.destroy=破坏	#
+action.interaction.place=放置	#
+action.npc.dialog=交谈	#
+action.saving_orb.active=激活	#
+action.saving_orb.save=存档	#
+action.wooden_ladder.pick_up=拾起	#
+
+
+
+
+item.dontforget:entity_remover=实体移除器	#
+item.dontforget:wooden_ladder_4x_item=木梯	#
+item.dontforget:miner_helmet=矿工头盔	#
+item.dontforget:miner_leader_helmet=矿工队长头盔	#
+item.dontforget:saving_crystal.name=存档水晶	#
+
+item.spawn_egg.entity.dontforget:saving_orb.name=存档之球刷怪蛋	#
+item.spawn_egg.entity.dontforget:steven.name=Steven刷怪蛋	#
+item.spawn_egg.entity.dontforget:vex_guide.name=恼鬼向导刷怪蛋	#
+
+
+
+
+text.title.enter_area=§f已到达新区域§r	#
+text.title.enter_area.cobble_wastes=§l§8- 圆石荒地 -§r	#
+text.title.enter_area.lush_cave=§l§2- 繁茂洞穴 -§r	#
+text.title.enter_area.redstone_mineshaft=§l§c- 红石矿道 -§r	#
+
+text.title.enter_subarea=§f已到达新子区域§r	#
+text.title.enter_subarea.cobble_wastes.transport=§8- 遗弃的运输站 -§r	#
+text.title.enter_subarea.lush_cave.forest=§2- 神秘森林 -§r	#
+text.title.enter_subarea.redstone_mineshaft=§c- 红石矿道 -§r	#
+
+
+
+
+text.dialog.debug.prefix=§l§2调试 >> §r	#
+text.dialog.debug.run_function=§2运行了函数：§a	#
+
+text.dialog.hint.prefix=§l§e提示 >> §r	#
+text.dialog.hint.collect_ladder_1=§a去找几架梯子吧	#
+text.dialog.hint.collect_ladder_2=§a收集§e4§a块梯子	#
+text.dialog.hint.pull_lever_0=§a拉下拉杆§r	#
+text.dialog.hint.count_lever_0=§a拉杆已拉下 [0/2]§r	#
+text.dialog.hint.count_lever_1=§a拉杆已拉下 [1/2]§r	#
+text.dialog.hint.count_lever_2=§a拉杆已拉下 [2/2]§r	#
+text.dialog.hint.sprint_1=§a双击§e前进键§a可以疾跑	#
+text.dialog.hint.sprint_2=§a通过疾跑，你能抵达更远的地方	#
+text.dialog.hint.open_chest_1=§a打开附近的箱子吧	#
+text.dialog.hint.open_chest_2=§a这个世界到处都有箱子	#
+text.dialog.hint.open_chest_3=§a有时它们空空如也	#
+text.dialog.hint.open_chest_4=§a但更多的时候，你会为找到财宝而欢呼雀跃的	#
+
+text.dialog.objective.prefix=§l§e任务 >> §r	#
+text.dialog.objective.prefix_new=§l§b[新]§r	#
+text.dialog.objective.c0_1=§b探索四周，找到出口	#
+text.dialog.objective.c0_2=§b陷阱！击败敌人	#
+text.dialog.objective.c1_1=§b探索繁茂洞穴	#
+text.dialog.objective.c1_2=§b小心！迎战伏击	#
+
+
+text.dialog.myself.silent=§l§f......	#
+text.dialog.kallet.silent=§6......	#
+
+text.dialog.speaker.intro=[悠远的回响] 	#
+text.dialog.speaker.kallet=[卡莱特] 	#
+text.dialog.speaker.kallet_first_meeting=[孩子] 	#
+text.dialog.speaker.unknown=[???] 	#
+
+text.dialog.vex_guide.encounter_1=* 诡异的哭嚎 *	#
+text.dialog.vex_guide.encounter_2=多么§l陌生的§r面孔啊！	#
+text.dialog.vex_guide.encounter_3=哦，放轻松，我只是...	#
+text.dialog.vex_guide.encounter_4=过来打个招呼。	#
+text.dialog.vex_guide.encounter_5=欢迎！	#
+text.dialog.vex_guide.encounter_6=我是恼鬼，这儿的小向导。	#
+text.dialog.vex_guide.encounter_7=迫不及待要探索这儿了，是吧？	#
+text.dialog.vex_guide.encounter_8=* 诡异的笑声 *	#
+text.dialog.vex_guide.encounter_9=别急，先跟我来，给你看个小东西。	#
+text.dialog.vex_guide.encounter_10=你瞧，一个神秘的底座...	#
+text.dialog.vex_guide.encounter_11=用我给你的东西，和底座交互。	#
+text.dialog.vex_guide.encounter_12=§l干得漂亮！§r	#
+text.dialog.vex_guide.encounter_13=无论你身处何地，只要身边有这种存档之球，就能像刚刚那样保存档案。	#
+text.dialog.vex_guide.encounter_14=在接下来的旅程中，你还会见到它的。	#
+text.dialog.vex_guide.encounter_15a=§l没礼貌。§r	#
+text.dialog.vex_guide.encounter_15b=话不多说，往前走吧。	#
+text.dialog.vex_guide.encounter_16a=你无视我。	#
+text.dialog.vex_guide.encounter_16b=眼瞎看不见我在哪吗？	#
+text.dialog.vex_guide.encounter_16c=你只是想要我的水晶而已。	#
+text.dialog.vex_guide.encounter_17a=切，恶心...	#
+text.dialog.vex_guide.encounter_17b=注意安全，小探险家...	#
+text.dialog.vex_guide.encounter_18a=好吧，刚刚的事到此为止，我们上面见。	#
+text.dialog.vex_guide.encounter_18b=我们上面见。	#
+
+text.dialog.steven.encounter_1=站住。	#
+text.dialog.steven.encounter_2=你是——喔。	#
+text.dialog.steven.encounter_3=你和它们不一样，我从来没见过你。	#
+text.dialog.steven.encounter_4=而且你身上也没有腥味和怪味。	#
+text.dialog.steven.encounter_5=嗯...	#
+text.dialog.steven.encounter_5_choice_a=我是人类。	#
+text.dialog.steven.encounter_5_choice_b=求求你别杀我！	#
+text.dialog.steven.encounter_5_choice_c=...	#
+text.dialog.steven.encounter_5_answer_a1=不是，啥？	#
+text.dialog.steven.encounter_5_answer_a2=哦，咱们有点误会啊。	#
+text.dialog.steven.encounter_5_answer_a3=我的错，我的错。	#
+text.dialog.steven.encounter_5_answer_b1=* 大笑 *	#
+text.dialog.steven.encounter_5_answer_b2=我还没想杀你呢。	#
+text.dialog.steven.encounter_5_answer_b3=吓着你了，对不起喔。	#
+text.dialog.steven.encounter_5_answer_c1=看来你是人类啊。	#
+text.dialog.steven.encounter_5_answer_c2=我有良心，不会滥杀同胞。	#
+text.dialog.steven.encounter_5_answer_c3=吓着你了，对不起喔。	#
+text.dialog.steven.encounter_6=我正在做梯子。	#
+text.dialog.steven.encounter_7=通往上面道路的梯子坏了。	#
+text.dialog.steven.encounter_8=所以我被困在这儿了，你应该也是这样吧。	#
+text.dialog.steven.encounter_8_choice_a1=我见过一截梯子。	#
+text.dialog.steven.encounter_8_choice_a2=那截梯子放在遗迹里。	#
+text.dialog.steven.encounter_8_choice_b=...	#
+text.dialog.steven.encounter_8_answer_a1=遗迹？	#
+text.dialog.steven.encounter_8_answer_a2=怪不得你这么特别。	#
+text.dialog.steven.encounter_8_answer_a3=你是从另一个世界来的，是不是？	#
+text.dialog.steven.encounter_8_answer_a4=哈哈，玩笑而已啦。	#
+text.dialog.steven.encounter_9=喔，梯子做好了。	#
+text.dialog.steven.encounter_10=我要回我的小店了，它就建在这上面。	#
+text.dialog.steven.encounter_11=感兴趣就来坐坐吧。	#
+
+
+
+
+text.battle.prefix=§l§c战斗 >> §r	#
+text.battle.battle_begin=§a战斗开始§r	#
+text.battle.battle_begin_ready=§a战斗一触即发§r	#
+text.battle.battle_begin_caution=§a当心伏击！§r	#
+text.battle.battle_end=§a战斗失败§r	#
+text.battle.battle_end_win=§a战斗胜利§r	#
+text.battle.wave_current=§a回合§r	#
+text.battle.wave_begin=§a回合开始§r	#
+text.battle.wave_end=§a回合结束§r	#
+text.battle.current_wave_enemy_killed=§a敌人已击败	#
+text.battle.enemy_amount=§a敌人数量：§r	#
+text.battle.atk_increase=的攻击升高了！	#
+text.battle.atk_decrease=的攻击降低了！	#
+text.battle.def_increase=的防御升高了！	#
+text.battle.def_decrease=的防御降低了！	#
+
+
+
+text.entity.player.profile_saved=§a档案已保存§r	#
+text.entity.player.skill.cooldown_end=§a技能已恢复	#
+text.entity.player.skill.fighter_activate=拔出了他的剑！	#
+text.entity.player.skill.healer_activate=吟唱了颂歌！	#
+text.entity.player.skill.mage_activate=施展了法术！	#
+text.entity.player.skill.loner_activate=低语着隐秘！	#

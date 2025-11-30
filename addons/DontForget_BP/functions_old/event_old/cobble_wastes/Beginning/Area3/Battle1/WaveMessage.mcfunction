@@ -1,0 +1,1 @@
+#titleraw @a[tag=debugger] actionbar {"rawtext":[{"translate":"text.battle.enemy_amount"},{"score":{"name":"EVENT_CW_Beginning_Area3_Battle1_EnemyAmount","objective":"counter"}}]}

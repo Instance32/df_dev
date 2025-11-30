@@ -1,0 +1,241 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dontforget:wooden_ladder_4x_entity",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+            "dontforget:lay_down": {
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        }
+                                    ]
+                                },
+                                "event": 
+                                    "dontforget:ladder_picked_up"
+                            },
+                            "interact_text": "action.wooden_ladder.pick_up",
+                            "swing": true,
+                            "vibration": "entity_interact"
+                        }
+                    ]
+                },
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "dontforget:standing_up": {
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 0.5,
+                    "time_down_event": {
+                        "event": "dontforget:ladder_stand_up"
+                    }
+                },
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "dontforget:stand_up": {
+                "minecraft:variant": {
+                    "value": 2
+                }
+            },
+            "dontforget:laying_down": {
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 0.5,
+                    "time_down_event": {
+                        "event": "dontforget:ladder_lay_down"
+                    }
+                },
+                "minecraft:variant": {
+                    "value": 3
+                }
+            },
+            "dontforget:destroy": {
+                "minecraft:despawn": {
+                },
+                "minecraft:variant": {
+                    "value": -1
+                }
+            }
+        },
+		"components": {
+		    "minecraft:collision_box": {
+                "width": 0.50,
+                "height": 0.50
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/dontforget/entities/wooden_ladder_4x_entity.json"
+			}
+		},
+		"events": {
+		    "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "dontforget:lay_down"
+                    ]
+                },
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/wooden_ladder/main/Init"
+                    ],
+                    "target": "self"
+                }
+            },
+            "dontforget:ladder_standing_up": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/wooden_ladder/effect/StandingUp"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:lay_down"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:standing_up"
+                    ]
+                }
+            },
+            "dontforget:ladder_stand_up": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/wooden_ladder/effect/StandUp"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:standing_up"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:stand_up"
+                    ]
+                }
+            },
+            "dontforget:ladder_laying_down": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/wooden_ladder/effect/LayingDown"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:stand_up"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:laying_down"
+                    ]
+                }
+            },
+            "dontforget:ladder_lay_down": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/wooden_ladder/effect/LayingDown"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:laying_down"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:lay_down"
+                    ]
+                }
+            },
+            "dontforget:ladder_picked_up": {
+                "sequence": [
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/wooden_ladder/effect/PickedUpSelf"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/wooden_ladder/effect/PickedUpOther"
+                            ],
+                            "target": "other"
+                        }
+                    }
+                ],
+                "remove": {
+                    "component_groups": [
+                        "dontforget:stand_up",
+                        "dontforget:lay_down"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:destroy"
+                    ]
+                }
+            },
+            "dontforget:destroy": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/wooden_ladder/main/Destroy"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:stand_up",
+                        "dontforget:lay_down"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:destroy"
+                    ]
+                }
+            }
+        }
+	}
+}

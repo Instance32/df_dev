@@ -1,0 +1,2 @@
+execute if score EV_CW_BGN_Area3_Act1_Plot step matches 0 run function dontforget/event/cobble_wastes/beginning/area3/act1/A1Repeat
+execute if score EV_CW_BGN_Area3_Act1_Plot step matches 1 run function dontforget/event/cobble_wastes/beginning/area3/act1/A2Repeat

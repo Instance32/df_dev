@@ -1,0 +1,1 @@
+execute if entity @s[tag=!is_destroying] run tp @s ~ ~ ~

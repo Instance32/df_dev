@@ -1,0 +1,1 @@
+particle dontforget:arrow_left_z ~-0.5 ~ ~-0.5

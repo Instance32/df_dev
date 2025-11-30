@@ -1,0 +1,1 @@
+execute if score EVENT_GP_GameBegin_Portal_EnderEye counter matches 12 run scoreboard players set EVENT_GP_GameBegin_Portal step 3

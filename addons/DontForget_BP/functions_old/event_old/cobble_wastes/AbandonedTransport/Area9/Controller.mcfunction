@@ -1,0 +1,1 @@
+execute if score EVENT_CW_AbandonedTransport_Area9_Battle1 step matches 0.. run function dontforget/event/cobble_wastes/AbandonedTransport/Area9/Battle1/Controller

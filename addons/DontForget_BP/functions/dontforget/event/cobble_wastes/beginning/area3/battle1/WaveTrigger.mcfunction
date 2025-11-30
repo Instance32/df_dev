@@ -1,0 +1,3 @@
+execute if score EV_CW_BGN_Area3_Battle1_CurrentWave counter matches 0.. if score EV_CW_BGN_Area3_Battle1_WaveCountdown timer matches 0 run function dontforget/event/cobble_wastes/beginning/area3/battle1/WaveBegin
+execute if score EV_CW_BGN_Area3_Battle1_CurrentWave counter matches 0.. if score EV_CW_BGN_Area3_Battle1_WaveCountdown timer matches -1 if score EV_CW_BGN_Area3_Battle1_EnemyAmount counter matches 0.. run function dontforget/event/cobble_wastes/beginning/area3/battle1/WaveMessage
+execute if score EV_CW_BGN_Area3_Battle1_CurrentWave counter matches 0.. if score EV_CW_BGN_Area3_Battle1_WaveCountdown timer matches -1 if score EV_CW_BGN_Area3_Battle1_EnemyAmount counter matches 0 run function dontforget/event/cobble_wastes/beginning/area3/battle1/WaveEnd

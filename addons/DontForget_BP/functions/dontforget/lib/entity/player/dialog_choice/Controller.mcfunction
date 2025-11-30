@@ -1,0 +1,4 @@
+execute if entity @s[tag=!is_making_dialog_choices.inited] run function dontforget/lib/entity/player/dialog_choice/Init
+execute if entity @s[tag=is_making_dialog_choices.inited] positioned ~~1~ rotated 0 0 run function dontforget/lib/entity/player/dialog_choice/ChooseChoices
+execute if entity @s[tag=is_making_dialog_choices.inited] positioned ~~1~ rotated 0 0 run function dontforget/lib/entity/player/dialog_choice/Particles
+execute if entity @s[tag=is_making_dialog_choices.inited] positioned ~~384~ run execute as @e[tag=marker,c=1,tag=is_dialog_control] at @s positioned ~~-383~ run function dontforget/lib/entity/player/dialog_choice/FollowChoices

@@ -1,0 +1,1 @@
+execute if score TICK timer matches 20 run scoreboard players add EV_AW_STARTROOM_PTLAnim timer 1

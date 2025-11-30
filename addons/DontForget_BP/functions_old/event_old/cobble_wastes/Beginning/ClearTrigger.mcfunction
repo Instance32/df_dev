@@ -1,0 +1,1 @@
+execute if score EVENT_CW_Beginning_Area1 step matches 1 if score EVENT_CW_Beginning_Area2 step matches 1 if score EVENT_CW_Beginning_Area3 step matches 4 if score EVENT_CW_Beginning_Area4 step matches 1 run function dontforget/event/cobble_wastes/Beginning/Clear

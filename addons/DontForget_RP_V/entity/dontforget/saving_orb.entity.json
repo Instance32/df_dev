@@ -1,0 +1,35 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "dontforget:saving_orb",
+            "min_engine_version": "1.8.0",
+            "materials": {
+                "default": "saving_orb"
+            },
+            "textures": {
+                "default": "textures/dontforget/entity/saving_orb"
+            },
+            "animations": {
+                "idle": "animation.saving_orb.idle",
+                "saving": "animation.saving_orb.saving",
+                "active": "animation.saving_orb.active",
+                "inactive": "animation.saving_orb.inactive",
+                "states_controller": "controller.animation.saving_orb.states"
+            },
+            "scripts": {
+                "animate": [
+                    "states_controller"
+                ]
+            },
+            "geometry": {
+                "default": "geometry.saving_orb"
+            },
+            "render_controllers": [ "controller.render.default" ],
+            "enable_attachables": true,
+            "spawn_egg": {
+                "texture": "saving_orb_spawn_egg"
+            }
+        }
+    }
+}

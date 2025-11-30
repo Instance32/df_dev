@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.wooden_ladder_item.first_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [0, 0, 0],
+					"position": [0, 16, 0]
+				}
+			}
+		},
+		"animation.wooden_ladder_item.third_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [0, 0, 0],
+					"position": [0, 16, -10.5],
+					"scale": 1.00
+				}
+			}
+		}
+	}
+}

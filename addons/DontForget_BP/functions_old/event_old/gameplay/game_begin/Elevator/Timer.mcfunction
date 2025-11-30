@@ -1,0 +1,2 @@
+execute if score EVENT_GP_GameBegin_Elevator_Cycler timer matches 4.. run scoreboard players set EVENT_GP_GameBegin_Elevator_Cycler timer 0
+execute if score EVENT_GP_GameBegin_Elevator_Cycler timer matches 0..3 run scoreboard players add EVENT_GP_GameBegin_Elevator_Cycler timer 1

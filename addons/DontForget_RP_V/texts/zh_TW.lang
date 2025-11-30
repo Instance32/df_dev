@@ -1,0 +1,247 @@
+pack.name=别忘记-视觉資源包	#
+pack.description=作者：AXAlad257 / SuperCuter32 / Zongzi0396	#
+
+
+
+entity.dontforget:marker.name=标记	#
+entity.dontforget:saving_orb.name=存档之球	#
+entity.dontforget:wooden_elevator.name=木质电梯	#
+entity.dontforget:wooden_ladder_4x_entity.name=木梯	#
+entity.dontforget:steven.name=Steven	#
+
+entity.dontforget:zombie.miner.name=矿工僵尸	#
+entity.dontforget:zombie.miner_leader.name=矿工僵尸队长	#
+entity.dontforget:zombie.armored.name=武装僵尸	#
+entity.dontforget:zombie.armored_with_sword.name=持剑武装僵尸	#
+entity.dontforget:zombie.armored_leader.name=武装僵尸队长	#
+
+entity.dontforget:skeleton.armored.name=武装骷髅弓箭手	#
+entity.dontforget:skeleton.armored_leader.name=武装骷髅弓箭手队长	#
+
+
+
+
+action.interaction.clean=扫除	#
+action.interaction.confirm=确认	#
+action.interaction.destroy=破坏	#
+action.interaction.place=放置	#
+action.npc.dialog=交谈	#
+action.saving_orb.active=激活	#
+action.saving_orb.save=存档	#
+action.wooden_ladder.pick_up=拾起	#
+
+
+
+
+item.dontforget:entity_remover=实体移除器	#
+item.dontforget:wooden_ladder_4x_item=木梯	#
+item.dontforget:miner_helmet=矿工头盔	#
+item.dontforget:miner_leader_helmet=矿工队长头盔	#
+item.dontforget:saving_crystal.name=存档水晶	#
+
+item.spawn_egg.entity.dontforget:saving_orb.name=存档之球刷怪蛋	#
+item.spawn_egg.entity.dontforget:steven.name=Steven刷怪蛋	#
+
+
+
+
+text.title.enter_area=§f已到达新区域§r	#
+text.title.enter_area.cobble_wastes=§l§8- 圆石荒地 -§r	#
+text.title.enter_area.lush_cave=§l§2- 繁茂洞穴 -§r	#
+text.title.enter_area.redstone_mineshaft=§l§c- 红石矿道 -§r	#
+
+text.title.enter_subarea=§f已到达新子区域§r	#
+text.title.enter_subarea.cobble_wastes.ruins=§8- 遗弃废墟 -§r	#
+text.title.enter_subarea.lush_cave.forest=§2- 神秘森林 -§r	#
+text.title.enter_subarea.redstone_mineshaft=§c- 红石矿道 -§r	#
+
+
+
+
+text.dialog.debug.prefix=§l§2调试 >> §r	#
+text.dialog.debug.run_function=§2运行了函数：§a	#
+
+text.dialog.hint.prefix=§l§e提示 >> §r	#
+text.dialog.hint.leave_intro=§a检查水井，离开这里	#
+text.dialog.hint.collect_scaffolding_1=§a需要§e3§a只脚手架	#
+text.dialog.hint.collect_scaffolding_2=§a脚手架已放置	#
+text.dialog.hint.collect_scaffolding_3=§a已找到捷径，无法再放置脚手架	#
+text.dialog.hint.need_scaffolding_1=§a脚手架已收集[0/3]	#
+text.dialog.hint.need_scaffolding_2=§a脚手架已收集[1/3]	#
+text.dialog.hint.need_scaffolding_3=§a脚手架已收集[2/3]	#
+text.dialog.hint.need_scaffolding_4=§a脚手架已收集[3/3]	#
+text.dialog.hint.open_lever_0=§a拉下拉杆，创造道路	#
+text.dialog.hint.leveropened_0=§a拉杆已拉下[0/2]	#
+text.dialog.hint.leveropened_1=§a拉杆已拉下[1/2]	#
+text.dialog.hint.leveropened_2=§a拉杆已拉下[2/2]	#
+text.dialog.hint.sprint_1=§a双击 §e前进键§a 可以疾跑	#
+text.dialog.hint.sprint_2=§a通过疾跑，你能抵达更远的地方	#
+text.dialog.hint.open_chest_1=§a打开附近的箱子	#
+text.dialog.hint.open_chest_2=§a这个世界到处都有箱子	#
+text.dialog.hint.open_chest_3=§a也许你能在里面找到食物或工具哦	#
+
+text.dialog.objective.prefix=§l§e任务 >> §r	#
+text.dialog.objective.prefix_new=§l§b[新]§r	#
+text.dialog.objective.c0_1=§a探索四周，找到出口	#
+text.dialog.objective.c0_2=§a陷阱！击败敌人	#
+text.dialog.objective.c1_1=§a探索繁茂洞穴	#
+text.dialog.objective.c1_2=§a小心！迎战伏击	#
+
+
+text.dialog.myself.silent=§l§f......	#
+text.dialog.kallet.silent=§6......	#
+
+text.dialog.speaker.intro=[悠远的回响] 	#
+text.dialog.speaker.kallet=[卡莱特] 	#
+text.dialog.speaker.kallet_first_meeting=[孩子] 	#
+text.dialog.speaker.unknown=[???] 	#
+
+text.dialog.vex_guide.encounter_1=* 诡异的哭嚎 *	#
+text.dialog.vex_guide.encounter_2=多么陌生的面孔啊！	#
+text.dialog.vex_guide.encounter_3=哦，放轻松，我只是...	#
+text.dialog.vex_guide.encounter_4=来打个招呼。	#
+text.dialog.vex_guide.encounter_5=欢迎！	#
+text.dialog.vex_guide.encounter_6=我是恼鬼，这儿的小向导。	#
+text.dialog.vex_guide.encounter_7=迫不及待要探索这儿了，是吧？	#
+text.dialog.vex_guide.encounter_8=* 诡异的笑声 *	#
+text.dialog.vex_guide.encounter_9=别急，先跟我来，给你看个小东西。	#
+text.dialog.vex_guide.encounter_10=你瞧，一个神秘的底座...	#
+text.dialog.vex_guide.encounter_11=用我给你的东西，和底座交互。	#
+text.dialog.vex_guide.encounter_12=干得漂亮！	#
+text.dialog.vex_guide.encounter_13=无论你身处何地，只要身边有这种存档之球，就能像刚刚那样保存档案。	#
+text.dialog.vex_guide.encounter_14=在接下来的旅程中，你还会见到它的。	#
+text.dialog.vex_guide.encounter_15a=没礼貌。	#
+text.dialog.vex_guide.encounter_15b=话不多说，往前走吧。	#
+text.dialog.vex_guide.encounter_16a=你无视我。	#
+text.dialog.vex_guide.encounter_16b=眼瞎看不见我在哪吗？	#
+text.dialog.vex_guide.encounter_16c=你只是想要我的水晶而已。	#
+text.dialog.vex_guide.encounter_17a=切，恶心...	#
+text.dialog.vex_guide.encounter_17b=注意安全，小探险家...	#
+text.dialog.vex_guide.encounter_18a=好吧，刚刚的事到此为止，我们上面见。	#
+text.dialog.vex_guide.encounter_18b=我们上面见。	#
+
+text.dialog.intro_1=§f噢......你醒了。	#
+text.dialog.intro_2=§f真是漫长的一觉啊，你感觉到了吗？	#
+text.dialog.intro_3=§f好吧，也许你并不健谈。	#
+text.dialog.intro_4=§f我告诉你，你已经睡了三天三夜了！	#
+text.dialog.intro_5=§f很离谱吧？	#
+text.dialog.intro_6=§f而你......对此毫不知情？	#
+text.dialog.intro_7=§f行吧，算了，我不想知道太多你的想法。	#
+text.dialog.intro_8=§f咱们该走了。	#
+text.dialog.intro_9=§f啊，在你回到现实世界前，我还要说一句。	#
+text.dialog.intro_10=§d别忘记§f。	#
+text.dialog.intro_11=§f......?	#
+text.dialog.intro_12=§f现在的确是保持沉默的好时机。	#
+text.dialog.intro_13=§f我的“长篇大论”，你肯定听过一次了吧？	#
+text.dialog.intro_14=§f噢，噢，你不耐烦了。	#
+text.dialog.intro_15=§f还是这么想回到你的现实世界啊。	#
+text.dialog.intro_16=§f哼哼，我懂了......	#
+
+text.dialog.intro_leave_1=§f你-你怎么还在这？	#
+text.dialog.intro_leave_2=§f你是听不懂我的话吗？快点走！	#
+text.dialog.intro_leave_3=§f无语了......	#
+
+
+text.dialog.cobble_wastes.main_1=§f又是......一个梦？	#
+text.dialog.cobble_wastes.main_2=§f思绪像絮似的散去。	#
+text.dialog.cobble_wastes.main_3=§f无法对眼前的景象产生反应。	#
+text.dialog.cobble_wastes.main_4=§l§f这是哪......？	#
+text.dialog.cobble_wastes.main_5=§l§f我好像做了一个梦，梦到了......	#
+text.dialog.cobble_wastes.main_6=§l§f我梦到了什么来着？	#
+text.dialog.cobble_wastes.main_7=§f一切都回忆不起来，心在颤抖。	#
+text.dialog.cobble_wastes.main_8=§f我在哪？我在做什么？我为何会在这里？	#
+text.dialog.cobble_wastes.main_9=§f这又是一个梦？	#
+text.dialog.cobble_wastes.main_10=§l§7咕咕......咕咕......	#
+text.dialog.cobble_wastes.main_11=§f看来不是。	#
+text.dialog.cobble_wastes.main_12=§f生存的本能还没被遗忘。	#
+text.dialog.cobble_wastes.main_13=§l§f这个地方......咳咳......我要找到食物和水......	#
+text.dialog.cobble_wastes.main_14=§l§f然后赶紧离开这里......！	#
+text.dialog.cobble_wastes.main_15=§l§f......我自己？	#
+text.dialog.cobble_wastes.main_16=§l§f......！	#
+text.dialog.cobble_wastes.main_17=§l§f完了！有陷阱！	#
+text.dialog.cobble_wastes.main_18=§l§f这是僵尸陷阱！！	#
+
+text.dialog.cobble_wastes.fall_into_water_1=§l§f哇啊！	#
+text.dialog.cobble_wastes.fall_into_water_2=§l§f这儿真是别有洞天啊。	#
+text.dialog.cobble_wastes.fall_into_water_3=§l§f......空气比来处新鲜了。	#
+
+text.dialog.cobble_wastes.meet_kallet_1=§6啊啊啊啊啊啊啊！！	#
+text.dialog.cobble_wastes.meet_kallet_2=§f吓了一跳，立即朝声源的方向看去。	#
+text.dialog.cobble_wastes.meet_kallet_3=§f透过墙缝，看到后面坐着一个满身灰尘的小孩子。	#
+text.dialog.cobble_wastes.meet_kallet_4=§f他被吓得浑身发抖，两只手来回不停地搓。	#
+text.dialog.cobble_wastes.meet_kallet_5=§6别过来，别过来，怪物！快走，我-我打死你！	#
+text.dialog.cobble_wastes.meet_kallet_6=§f他说完，捡起一颗石子就朝石墙缝里的“怪物”砸去。	#
+text.dialog.cobble_wastes.meet_kallet_7=§f石子的威力明显不足。	#
+text.dialog.cobble_wastes.meet_kallet_8=§f他惊慌失措，无计可施了。	#
+text.dialog.cobble_wastes.meet_kallet_9=§l§f呃......你好？	#
+text.dialog.cobble_wastes.meet_kallet_10=§6怪-怪物......怪物说话了！	#
+text.dialog.cobble_wastes.meet_kallet_11=§l§f我很吓人吗？	#
+text.dialog.cobble_wastes.meet_kallet_12=§6你-你......！	#
+text.dialog.cobble_wastes.meet_kallet_13=§f说出这话的时候，我也开始了思考。	#
+text.dialog.cobble_wastes.meet_kallet_14=§f我是什么样子呢？	#
+text.dialog.cobble_wastes.meet_kallet_15=§f我怎么什么都想不起来了，包括我的脸？	#
+text.dialog.cobble_wastes.meet_kallet_16=§f而且，我真的有这孩子说的，那么可怕吗？	#
+text.dialog.cobble_wastes.meet_kallet_17=§f又一不小心伤害到别人了。	#
+text.dialog.cobble_wastes.meet_kallet_18=§f我回过神看向那孩子，发现那孩子也在看着我。	#
+text.dialog.cobble_wastes.meet_kallet_19=§f在他给出任何答复前，我不敢再言语。	#
+text.dialog.cobble_wastes.meet_kallet_20=§f哪怕他只是个小孩子。	#
+text.dialog.cobble_wastes.meet_kallet_21=§6你还-还好吧？	#
+text.dialog.cobble_wastes.meet_kallet_22=§f他看了我好久，好久。	#
+text.dialog.cobble_wastes.meet_kallet_23=§f那眼神里透露出来的已经不是恐惧了。
+text.dialog.cobble_wastes.meet_kallet_24=§l§f我-我没事。	#
+text.dialog.cobble_wastes.meet_kallet_25=§l§f......你呢？	#
+text.dialog.cobble_wastes.meet_kallet_26=§f他迟疑了，没开口。	#
+text.dialog.cobble_wastes.meet_kallet_27=§l§f我真的......很吓人吗？	#
+text.dialog.cobble_wastes.meet_kallet_28=§6不，不是，你-你......	#
+text.dialog.cobble_wastes.meet_kallet_29=§6......对不起。	#
+text.dialog.cobble_wastes.meet_kallet_30=§6刚才我冲你大吼大叫，把你给吓着了......	#
+text.dialog.cobble_wastes.meet_kallet_31=§f他的道歉突如其来，而我知道真正错在谁。	#
+text.dialog.cobble_wastes.meet_kallet_32=§6其实你不是怪物，是我-我太慌张了......	#
+text.dialog.cobble_wastes.meet_kallet_33=§f他低着头，这次他没有看着我。	#
+text.dialog.cobble_wastes.meet_kallet_34=§6我-我得走了，我......	#
+text.dialog.cobble_wastes.meet_kallet_35=§6再见，再见！	#
+text.dialog.cobble_wastes.meet_kallet_36=§f看着他远去，灯光下被拉长的倒影。	#
+text.dialog.cobble_wastes.meet_kallet_37=§f还有好多事情想知道。	#
+text.dialog.cobble_wastes.meet_kallet_38=§f接下来呢？我该做什么呢？	#
+text.dialog.cobble_wastes.meet_kallet_39=§f总之，先离开这里吧......	#
+text.dialog.cobble_wastes.meet_kallet_40=§l§f呃......我见过你？	#
+
+
+text.dialog.lush_cave.enter_1=§l§f哇哦，这片绿意盎然......这是仙境吗？	#
+text.dialog.lush_cave.enter_2=§l§f哎，又听到僵尸的叫声了。	#
+text.dialog.lush_cave.enter_3=§l§f还是谨慎一些为妙啊。	#
+
+text.dialog.lush_cave.leveropened_1=§l§f啊，这下能够上去了。	#
+text.dialog.lush_cave.leveropened_2=§l§f这些机关，我难以说明它的原理，但是......	#
+text.dialog.lush_cave.leveropened_3=§l§f......太酷了。	#
+
+text.dialog.lush_cave.ambush_1=§l§f这个拉杆......没反应？	#
+text.dialog.lush_cave.ambush_2=§l§f又中计了......	#
+
+
+
+
+text.battle.prefix=§l§c战斗 >> §r	#
+text.battle.battle_begin=§a战斗开始§r	#
+text.battle.battle_begin_ready=§a战斗一触即发§r	#
+text.battle.battle_begin_caution=§a当心伏击！§r	#
+text.battle.battle_end=§a战斗失败§r	#
+text.battle.battle_end_win=§a战斗胜利§r	#
+text.battle.wave_current=§a回合§r	#
+text.battle.wave_begin=§a回合开始§r	#
+text.battle.wave_end=§a回合结束§r	#
+text.battle.current_wave_enemy_killed=§a敌人已击败	#
+text.battle.enemy_amount=§a敌人数量：§r	#
+text.battle.atk_increase=的攻击升高了！	#
+text.battle.atk_decrease=的攻击降低了！	#
+text.battle.def_increase=的防御升高了！	#
+text.battle.def_decrease=的防御降低了！	#
+
+
+
+text.entity.player.profile_saved=§a档案已保存§r	#
+text.entity.player.skill.cooldown_end=§a技能已恢复	#
+text.entity.player.skill.fighter_activate=拔出了他的剑！	#
+text.entity.player.skill.healer_activate=吟唱了颂歌！	#
+text.entity.player.skill.mage_activate=施展了法术！	#
+text.entity.player.skill.loner_activate=低语着隐秘！	#

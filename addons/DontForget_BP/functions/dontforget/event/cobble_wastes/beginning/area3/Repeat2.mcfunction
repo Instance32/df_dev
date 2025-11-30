@@ -1,0 +1,4 @@
+execute positioned 74 39 1 if entity @a[tag=game_player,r=32,hasitem={item=dontforget:wooden_ladder_4x_item}] run function dontforget/lib/particle/block_edge_draw
+execute positioned 74 40 1 if entity @a[tag=game_player,r=32,hasitem={item=dontforget:wooden_ladder_4x_item}] run function dontforget/lib/particle/block_edge_draw
+execute positioned 74 41 1 if entity @a[tag=game_player,r=32,hasitem={item=dontforget:wooden_ladder_4x_item}] run function dontforget/lib/particle/block_edge_draw
+execute positioned 74 42 1 if entity @a[tag=game_player,r=32,hasitem={item=dontforget:wooden_ladder_4x_item}] run function dontforget/lib/particle/block_edge_draw

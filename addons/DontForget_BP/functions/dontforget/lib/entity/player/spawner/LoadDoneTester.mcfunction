@@ -1,0 +1,1 @@
+execute if score TICK timer matches 20 in the_end run fill 98 49 -2 102 49 2 air replace obsidian

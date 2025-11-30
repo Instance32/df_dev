@@ -1,0 +1,1 @@
+particle dontforget:block_outline_draw_inwards ~-0.5 ~ ~-0.5

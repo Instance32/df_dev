@@ -1,0 +1,276 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "dontforget:saving_orb",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false,
+            "properties": {
+                "dontforget:saving_phase": {
+                    "type": "enum",
+                    "values": [ "inactive", "activing", "idle", "saving", "destroy" ],
+                    "client_sync": false,
+                    "default": "inactive"
+                }
+            }   
+        },
+        "component_groups": {
+            "dontforget:inactive": {
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "dontforget:saving_crystal"
+                                        }
+                                    ]
+                                },
+                                "event": 
+                                    "dontforget:become_active"
+                            },
+                            "interact_text": "action.saving_orb.active",
+                            "swing": true,
+                            "hurt_item": 1,
+                            "vibration": "entity_interact"
+                        }
+                    ]
+                },
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "dontforget:activing": {
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 4,
+                    "time_down_event": {
+                        "event": "dontforget:switch_to_idle"
+                    }
+                },
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "dontforget:idle": {
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "event": 
+                                    "dontforget:switch_to_saving"
+                            },
+                            "cooldown": 2,
+                            "swing": true,
+                            "interact_text": "action.saving_orb.save"
+                        }
+                    ]
+                },
+                "minecraft:variant": {
+                    "value": 2
+                }
+            },
+            "dontforget:saving": {
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 2,
+                    "time_down_event": {
+                        "event": "dontforget:switch_to_idle"
+                    }
+                },
+                "minecraft:variant": {
+                    "value": 3
+                }
+            },
+            "dontforget:destroy": {
+                "minecraft:despawn": {
+                },
+                "minecraft:variant": {
+                    "value": -1
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.80,
+                "height": 1.40
+            },
+            "minecraft:health": {
+                "value": 2,
+                "max": 2
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:nameable": {
+			    "allow_name_tag_renaming": true,
+			    "always_show": true
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+            "minecraft:type_family": {
+                "family": [ "interaction", "saving_orb" ]
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            },
+            "minecraft:conditional_bandwidth_optimization": {
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "dontforget:inactive"
+                    ]
+                },
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/saving_orb/main/Init"
+                    ],
+                    "target": "self"
+                },
+                "set_property": {
+                    "dontforget:saving_phase": "inactive"
+                }
+            },
+            "dontforget:destroy": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/saving_orb/main/Destroy"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:inactive",
+                        "dontforget:idle"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:destroy"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:saving_phase": "destroy"
+                }
+            },
+            "dontforget:become_active": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/saving_orb/effect/Active"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:inactive"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:activing"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:saving_phase": "activing"
+                }
+            },
+            "dontforget:become_inactive": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/saving_orb/effect/Inactive"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:idle"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:inactive"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:saving_phase": "inactive"
+                }
+            },
+            "dontforget:switch_to_idle": {
+                "remove": {
+                    "component_groups": [
+                        "dontforget:inactive",
+                        "dontforget:saving"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:idle"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:saving_phase": "idle"
+                }
+            },
+            "dontforget:switch_to_saving": {
+                "sequence": [
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/saving_orb/effect/SavingForSelf"
+                            ],
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "queue_command": {
+                            "command": [
+                                "function dontforget/lib/entity/saving_orb/effect/SavingForOther"
+                            ],
+                            "target": "other"
+                        }
+                    }
+                ],
+                "remove": {
+                    "component_groups": [
+                        "dontforget:inactive",
+                        "dontforget:idle"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:saving"
+                    ]
+                },
+                "set_property": {
+                    "dontforget:saving_phase": "saving"
+                }
+            }
+        }
+    }
+}

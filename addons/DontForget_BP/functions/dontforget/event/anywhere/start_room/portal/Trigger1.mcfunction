@@ -1,0 +1,1 @@
+execute if entity @p[tag=EV_AW_STARTROOM.is_close_to_portal] run scoreboard players set EV_AW_STARTROOM_PTL step 1

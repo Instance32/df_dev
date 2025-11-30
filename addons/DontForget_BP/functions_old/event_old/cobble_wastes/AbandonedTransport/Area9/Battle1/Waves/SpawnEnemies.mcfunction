@@ -1,0 +1,12 @@
+execute positioned 60 45 -70 run function dontforget/asset/entity/enemy/spawn_custom/Zombie4
+execute positioned 60 45 -50 run function dontforget/asset/entity/enemy/spawn_custom/Zombie2
+execute positioned 64 44 -90 run function dontforget/asset/entity/enemy/spawn_custom/Zombie1
+execute positioned 76 51 -58 run function dontforget/asset/entity/enemy/spawn_custom/Zombie2
+execute positioned 76 51 -50 run function dontforget/asset/entity/enemy/spawn_custom/Zombie4
+execute positioned 58 54 -62 run function dontforget/asset/entity/enemy/spawn_custom/Zombie1
+execute positioned 70 54 -62 run function dontforget/asset/entity/enemy/spawn_custom/Skeleton1
+execute positioned 58 54 -82 run function dontforget/asset/entity/enemy/spawn_custom/Zombie4
+execute positioned 70 54 -82 run function dontforget/asset/entity/enemy/spawn_custom/Zombie4
+execute positioned 76 54 -80 run function dontforget/asset/entity/enemy/spawn_custom/Zombie5
+execute positioned 88 54 -80 run function dontforget/asset/entity/enemy/spawn_custom/Zombie1
+execute positioned 88 54 -68 run function dontforget/asset/entity/enemy/spawn_custom/Zombie1

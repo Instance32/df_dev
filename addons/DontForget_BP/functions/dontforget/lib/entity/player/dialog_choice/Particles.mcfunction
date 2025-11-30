@@ -1,0 +1,1 @@
+execute at @e[r=2,tag=is_dialog_choice,tag=is_choosing_me] run particle minecraft:balloon_gas_particle ~~0.5~

@@ -1,0 +1,178 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"is_spawnable": false,
+			"identifier": "dontforget:collision",
+			"is_summonable": true,
+			"runtime_identifier": "minecraft:boat"
+		},
+		"component_groups": {
+		    "dontforget:default": {
+		        "minecraft:collision_box": {
+				    "width": 0,
+				    "height": 0
+			    }
+		    },
+            "dontforget:destroy": {
+                "minecraft:despawn": {
+                }
+            },
+			"dontforget:elevator_floor": {
+				"minecraft:collision_box": {
+					"width": 4.99,
+					"height": 1
+				}
+			},
+			"dontforget:elevator_pillar": {
+				"minecraft:collision_box": {
+					"width": 0.99,
+					"height": 4
+				}
+			},
+			"dontforget:elevator_ceiling": {
+				"minecraft:collision_box": {
+					"width": 2.99,
+					"height": 0.5
+				}
+			},
+			"dontforget:saving_orb_active": {
+				"minecraft:collision_box": {
+					"width": 0.8,
+					"height": 1.40
+				}
+			},
+			"dontforget:saving_orb_inactive": {
+				"minecraft:collision_box": {
+					"width": 0.8,
+					"height": 0.3125
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [{
+					"deals_damage": false
+				}]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:nameable": {
+			    "allow_name_tag_renaming": false,
+			    "always_show": false
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:type_family": {
+				"family": [ "collision" ]
+			},
+			"minecraft:fire_immune": true,
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            },
+			"minecraft:conditional_bandwidth_optimization": {
+
+			}
+		},
+		"events": {
+		    "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/collision/main/Init"
+                    ],
+                    "target": "self"
+                }
+            },
+            "dontforget:destroy": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/collision/main/Destroy"
+                    ],
+                    "target": "self"
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:destroy"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                }
+            },
+			"dontforget:become_elevator_floor": {
+				"add": {
+					"component_groups": [
+						"dontforget:elevator_floor"
+					]
+				},
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                }
+			},
+			"dontforget:become_elevator_pillar": {
+				"add": {
+					"component_groups": [
+						"dontforget:elevator_pillar"
+					]
+				},
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                }
+			},
+			"dontforget:become_elevator_ceiling": {
+				"add": {
+					"component_groups": [
+						"dontforget:elevator_ceiling"
+					]
+				},
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                }
+			},
+			"dontforget:become_saving_orb_active": {
+				"add": {
+					"component_groups": [
+						"dontforget:saving_orb_active"
+					]
+				},
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                }
+			},
+			"dontforget:become_saving_orb_inactive": {
+				"add": {
+					"component_groups": [
+						"dontforget:saving_orb_inactive"
+					]
+				},
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                }
+			}
+		}
+	}
+} 

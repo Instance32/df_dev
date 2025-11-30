@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "dontforget:wooden_elevator",
+            "min_engine_version": "1.8.0",
+            "materials": {
+                "default": "wooden_elevator"
+            },
+            "textures": {
+                "default": "textures/dontforget/entity/elevator/wooden"
+            },
+            "animations": {
+                "default": "animation.wooden_elevator.default",
+                "sway": "animation.wooden_elevator.sway",
+                "controller.elevator": "controller.animation.wooden_elevator"
+            },
+            "scripts": {
+                "animate": [
+                    "default"
+                ]
+            },
+            "geometry": {
+                "default": "geometry.wooden_elevator"
+            },
+            "render_controllers": [ "controller.render.default" ],
+            "enable_attachables": true
+        }
+    }
+}

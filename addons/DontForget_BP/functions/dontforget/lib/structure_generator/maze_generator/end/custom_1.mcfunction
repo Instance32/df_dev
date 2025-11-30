@@ -1,0 +1,1 @@
+structure load map:crisis_maze_floor 1095 70 1282

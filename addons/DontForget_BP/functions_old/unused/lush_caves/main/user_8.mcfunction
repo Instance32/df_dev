@@ -1,0 +1,1 @@
+execute positioned 216 60 69 align xyz if score c1_main op_timer matches 0 run particle sc:arrow_down ~ ~ ~

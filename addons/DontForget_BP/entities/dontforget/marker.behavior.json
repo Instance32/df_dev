@@ -1,0 +1,97 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+          "identifier": "dontforget:marker",
+          "is_spawnable": false,
+          "is_summonable": true,
+          "is_experimental": false
+        },
+        "component_groups": {
+		    "dontforget:default": {
+		    },
+            "dontforget:destroy": {
+                "minecraft:despawn": {
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.00,
+                "height": 0.00
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:nameable": {
+			    "allow_name_tag_renaming": false,
+			    "always_show": false
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+            "minecraft:type_family": {
+                "family": [ "marker" ]
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            },
+            "minecraft:conditional_bandwidth_optimization": {
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/marker/main/Init"
+                    ],
+                    "target": "self"
+                }
+            },
+            "dontforget:destroy": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/marker/main/Destroy"
+                    ],
+                    "target": "self"
+                },
+                "remove": {
+                    "component_groups": [
+                        "dontforget:default"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "dontforget:destroy"
+                    ]
+                }
+            },
+            "dontforget:dialog_control": {
+                "queue_command": {
+                    "command": [
+                        "function dontforget/lib/entity/marker/main/Init",
+                        "function dontforget/lib/entity/marker/effect/dialog_control/Init"
+                    ],
+                    "target": "self"
+                }
+            }
+        }
+    } 
+}

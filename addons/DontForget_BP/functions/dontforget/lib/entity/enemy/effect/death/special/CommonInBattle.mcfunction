@@ -1,0 +1,2 @@
+execute if entity @s[tag=is_in_CW_BGN_Area3_Battle1] run scoreboard players add EV_CW_BGN_Area3_Battle1_CurrentWaveEnemyKilled counter 1
+execute if entity @s[tag=is_in_CW_ABTP_Area9_Battle1] run scoreboard players add EV_CW_ABTP_Area9_Battle1_CurrentWaveEnemyKilled counter 1

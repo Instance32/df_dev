@@ -1,0 +1,1 @@
+execute if entity @p[tag=EVENT_GP_GameBegin.is_close_to_portal] run scoreboard players set EVENT_GP_GameBegin_Portal step 1

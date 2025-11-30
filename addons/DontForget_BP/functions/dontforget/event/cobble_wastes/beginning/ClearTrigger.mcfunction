@@ -1,0 +1,1 @@
+execute if score EV_CW_BGN_Area1 step matches 2 if score EV_CW_BGN_Area2 step matches 4 if score EV_CW_BGN_Area3 step matches 4 if score EV_CW_BGN_Area4 step matches 1 run function dontforget/event/cobble_wastes/beginning/Clear

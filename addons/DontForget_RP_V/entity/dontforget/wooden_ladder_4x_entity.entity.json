@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dontforget:wooden_ladder_4x_entity",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/dontforget/entity/wooden_ladder"
+			},
+			"geometry": {
+				"default": "geometry.wooden_ladder_4x_entity"
+			},
+			"animations": {
+                		"laying": "animation.ladder_entity.laying",
+                		"standing": "animation.ladder_entity.standing",
+                		"lay_down": "animation.ladder_entity.lay_down",
+                		"stand_up": "animation.ladder_entity.stand_up",
+                		"states_controller": "controller.animation.ladder_entity.states"
+            	},
+           	 	"scripts": {
+                		"animate": [
+                    		"states_controller"
+                		]
+            	},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

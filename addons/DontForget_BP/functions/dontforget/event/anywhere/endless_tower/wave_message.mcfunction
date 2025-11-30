@@ -1,0 +1,1 @@
+titleraw @a[tag=debugger] actionbar {"rawtext":[{"translate":"text.endless.enemy_amount"},{"score":{"name":"GL_EndlessTower_EnemyAmount","objective":"counter"}}]}
