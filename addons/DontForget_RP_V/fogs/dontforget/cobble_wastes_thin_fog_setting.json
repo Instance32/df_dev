@@ -2,25 +2,25 @@
   "format_version": "1.16.100",
   "minecraft:fog_settings": {
     "description": {
-      "identifier": "dontforget:fog_lush_cave"
+      "identifier": "dontforget:fog_cobble_wastes"
     },
     "distance": {
       "air": {
         "fog_start": 16.0,
-        "fog_end": 64.0,
-        "fog_color": "#6e8b3d",
+        "fog_end": 128.0,
+        "fog_color": "#504b55",
         "render_distance_type": "fixed"
       },
       "water": {
-        "fog_start": 8.0,
-        "fog_end": 24.0,
-        "fog_color": "#6495ed",
+        "fog_start": 2.0,
+        "fog_end": 16.0,
+        "fog_color": "#4a6a90",
         "render_distance_type": "fixed",
         "transition_fog": {
           "init_fog": {
             "fog_start": 0.0,
             "fog_end": 0.01,
-            "fog_color": "#6495ed",
+            "fog_color": "#4a6a90",
             "render_distance_type": "fixed"
           },
           "min_percent": 0.25,
@@ -30,9 +30,9 @@
         }
       },
       "weather": {
-        "fog_start": 4.0,
-        "fog_end": 32.0,
-        "fog_color": "#228b22",
+        "fog_start": 32.0,
+        "fog_end": 96.0,
+        "fog_color": "#3f3f42",
         "render_distance_type": "fixed"
       }
     }
